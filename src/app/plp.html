@@ -9,6 +9,7 @@
     </title>
     <link href="https://fonts.googleapis.com/css?family=Dosis:200,300,400,500,600,700,800" rel="stylesheet">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 
 </head>
 
@@ -94,92 +95,16 @@
                     </ul>
                 </div>
                 <div class="product-list col-md-9 col-xs-12">
-                    <div class="product-detail row">
-                        <div class="col-xs-12 col-sm-6 col-md-3">
-                            <div class="product-box row">
-                                <h3 class="col-xs-12">Fresh Kiwi - Green, 3 Pcs</h3>
-                                <div class="col-xs-6 col-sm-6 col-md-12 product-image">
-                                    <img src="images/products/fruit-n-veg/kiwi-green.jpg" class="width-100">
-                                </div>
-                                <div class="col-xs-6 col-sm-6 col-md-12 product-description">
-                                    <p>Kiwis are oval shaped with a brownish outer skin. The flesh is bright green and juicy with edible tiny black seeds.</p>
-                                    <div class="product-pricing">
-                                        <a href="#" class="button-small">Buy Now
-                                            <span>MRP Rs.87</span>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xs-12 col-sm-6 col-md-3">
-                            <div class="product-box row">
-                                <h3 class="col-xs-12">Apple- Washington,Regular, 4pcs</h3>
-                                <div class="col-xs-6 col-sm-6 col-md-12 product-image">
-                                    <img src="images/products/fruit-n-veg/apple.jpg" class="width-100">
-                                </div>
-                                <div class="col-xs-6 col-sm-6 col-md-12 product-description">
-                                    <p>The bright red coloured and heart shaped Washington apples are crunchy,juicy and slightlly sweet. Washington Apples are a natural.</p>
-                                    <div class="product-pricing">
-                                        <a href="#" class="button-small">Buy Now
-                                            <span>MRP Rs.87</span>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xs-12 col-sm-6 col-md-3">
-                            <div class="product-box row">
-                                <h3 class="col-xs-12">Fresh Kiwi - Green, 3 Pcs</h3>
-                                <div class="col-xs-6 col-sm-6 col-md-12 product-image">
-                                    <img src="images/products/fruit-n-veg/pomegrante.jpg" class="width-100">
-                                </div>
-                                <div class="col-xs-6 col-sm-6 col-md-12 product-description">
-                                    <p>Pomegranate variety has a glossy,vibrant and soft ruby-red skin.The inside of the fruit is divided into compartments by thin white.</p>
-                                    <div class="product-pricing">
-                                        <a href="#" class="button-small">Buy Now
-                                            <span>MRP Rs.87</span>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xs-12 col-sm-6 col-md-3">
-                            <div class="product-box row">
-                                <h3 class="col-xs-12">Fresh Kiwi - Green, 3 Pcs</h3>
-                                <div class="col-xs-6 col-sm-6 col-md-12 product-image">
-                                    <img src="images/products/fruit-n-veg/capsicum-green.jpg" class="width-100">
-                                </div>
-                                <div class="col-xs-6 col-sm-6 col-md-12 product-description">
-                                    <p>Kiwis are oval shaped with a brownish outer skin. The flesh is bright green and juicy with edible tiny black seeds.</p>
-                                    <div class="product-pricing">
-                                        <a href="#" class="button-small">Buy Now
-                                            <span>MRP Rs.87</span>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xs-12 col-sm-6 col-md-3">
-                            <div class="product-box row">
-                                <h3 class="col-xs-12">Fresh Kiwi - Green, 3 Pcs</h3>
-                                <div class="col-xs-6 col-sm-6 col-md-12 product-image">
-                                    <img src="images/products/fruit-n-veg/kiwi-green.jpg" class="width-100">
-                                </div>
-                                <div class="col-xs-6 col-sm-6 col-md-12 product-description">
-                                    <p>Kiwis are oval shaped with a brownish outer skin. The flesh is bright green and juicy with edible tiny black seeds.</p>
-                                    <div class="product-pricing">
-                                        <a href="#" class="button-small">Buy Now
-                                            <span>MRP Rs.87</span>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="product-detail row" id="product-name">
+                       
+
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
+    
     <!-- The Modal -->
     <div id="cart-modal-id" class="cart-modal">
         <!-- Modal content -->
@@ -205,10 +130,38 @@
             </div>
         </div>
     </div>
+
+    <script id="student-template" type="text/x-handlebars-template">
+        
+            {{#each products}}
+            <div class="col-xs-12 col-sm-6 col-md-3">
+                    <div class="product-box row" >
+                            <h3 class="col-xs-12">{{name}}</h3>
+                            <div class="col-xs-6 col-sm-6 col-md-12 product-image">
+                                <img src="{{imageURL}}" class="width-100">
+                            </div>
+                            <div class="col-xs-6 col-sm-6 col-md-12 product-description">
+                                <p>{{description}}</p>
+                                <div class="product-pricing">
+                                    <a href="#" class="button-small">Buy Now
+                                        <span>MRP Rs.{{price}}</span>
+                                    </a>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+           
+            {{/each}}
+            
+    </script>
+  
     <footer>
         <div class="footer">Copyright @ 2011-2018 Sabka Bazar Grocery Supplie Pvt Ltd
         </div>
     </footer>
+
+   
+    
 </body>
 
 </html>

@@ -7,7 +7,7 @@
       var slideIndex = 1;
 
       if (typeof(prev) != 'undefined' && prev != null) {
-          showSlide(slideIndex);
+          //showSlide(slideIndex);
 
           prev.addEventListener("click", function() {
               slideIndex--;

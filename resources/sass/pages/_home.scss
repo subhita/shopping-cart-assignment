@@ -7,7 +7,16 @@
     .row {
         @include div-row;
         text-align: center;
+        flex-direction: column-reverse;
+        &:nth-child(odd) {
+            flex-direction: row-reverse;
+            //background-color: pink;
+             
+        }  
+       
     }
+   
+   
     .offer {
         display: none;
         width: 100%;
