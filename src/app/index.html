@@ -72,11 +72,11 @@
             <div class="row">
                 <div class="col-xs-12">
                     <div class="slider_img">
-                        <div class="w3-content w3-display-container" >
-                         <div id="slider-data">
-                                
-                         </div>
-                           
+                        <div class="w3-content w3-display-container">
+                            <div id="slider-data">
+
+                            </div>
+
                             <button id="prev-button-js" class="w3-button w3-grey w3-display-left
                                     hide">PREV
                             </button>
@@ -103,9 +103,9 @@
                 </div>
             </div>
         </section>
-     
+
         <div id="categories-id">
-             
+
         </div>
     </div>
 
@@ -135,38 +135,36 @@
         </div>
     </div>
     <script id="slider-template" type="text/x-handlebars-template">
-        
-            {{#each banners}}
-            <img src="{{bannerImageUrl}}" class="offer">
-           
-            {{/each}}
-            
+
+        {{#each banners}}
+        <img src="{{bannerImageUrl}}" class="offer"> {{/each}}
+
     </script>
 
     <script id="categories-template" type="text/x-handlebars-template">
-        
-            {{#each categories}}
-            <section class="home-section" >
-                   
-                            <div class="row">
-                                    <div class="col-xs-8">
-                                        <div class="cat-inner-heading">{{name}}
-                                        </div>
-                                        <p class="cat-inner_text">{{description}}
-                                        </p>
-                                        <button class="cat_button">Explore {{key}}
+
+        {{#each categories}}
+        <section class="home-section">
+
+            <div class="row">
+                <div class="col-xs-8">
+                    <div class="cat-inner-heading">{{name}}
+                    </div>
+                    <p class="cat-inner_text">{{description}}
+                    </p>
+                    <button class="cat_button">Explore {{key}}
                                         </button>
-                                    </div>
-                                    <div class="col-xs-4">
-                                        <img src="{{imageUrl}}" alt="bakery" class="cat-inner-img">
-                                    </div>
-                                </div>
-                        
-                    
-                </section>
-           
-            {{/each}}
-            
+                </div>
+                <div class="col-xs-4">
+                    <img src="{{imageUrl}}" alt="bakery" class="cat-inner-img">
+                </div>
+            </div>
+
+
+        </section>
+
+        {{/each}}
+
     </script>
 
 

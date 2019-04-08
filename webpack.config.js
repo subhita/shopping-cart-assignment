@@ -20,7 +20,7 @@ module.exports = {
         new CopyWebpackPlugin([{
             from: './resources/images',
             to: 'images'
-        },{
+        }, {
             from: './resources/data',
             to: 'data'
         }]),
@@ -70,13 +70,15 @@ module.exports = {
                 test: /\.hbs$/,
                 loader: "handlebars-loader"
             },
-			 {
-        test: /\.hbs$/,
-        use: [{
-          loader: "handlebars-loader",
-          options: {helperDirs: path.resolve(__dirname, "./js/")}
-        }]
-      }
+            {
+                test: /\.hbs$/,
+                use: [{
+                    loader: "handlebars-loader",
+                    options: {
+                        helperDirs: path.resolve(__dirname, "./js/")
+                    }
+                }]
+            }
 
         ]
     }
