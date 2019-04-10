@@ -44,8 +44,11 @@
 		}
 	}
 	.product__item__col {
-		flex: 50%;
-		max-width: 50%;
+		// flex: 50%;
+		// max-width: 50%;
+	}
+	.product__list__item {
+		flex: 0 0 50%;
 	}
 	.pl__list {
 		figure {
@@ -67,7 +70,9 @@
 			padding: 0px 4px;
 		}
 	}
-	
+	.product__list__item {
+		flex: 0 0 100%;
+	}
 	.product__item__col {
 		flex: 100%;
 		max-width: 100%;

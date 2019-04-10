@@ -197,6 +197,9 @@
 .modal-footer h3 {
 	text-align: center;
   }
+  .modal-footer a {
+	  text-decoration: none;
+  }
 .item__count {
 	margin-top: 12px;
 }
@@ -218,5 +221,6 @@
 .cart__counter {
 	border: none;
     max-width: 1%;
-    margin: 0 14px;
+	margin: 0 14px;
+	background: none;
 }

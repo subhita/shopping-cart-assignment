@@ -41,11 +41,11 @@
     </header>
     <section class="home__section">
         <div class="slideshow-container">
-            <div class="mySlides fade">
-                <img src="img/offers/offer5.jpg" alt="independence day sale" class="sale" style="width:100%">
+            <div class="mySlides fade" id="slider-data">
+             <!-- <img src="img/offers/offer5.jpg" alt="independence day sale" class="sale" style="width:100%">  -->
             </div>
 
-            <div class="mySlides fade">
+             <!-- <div class="mySlides fade">
                 <img src="img/offers/offer4.jpg" alt="independence day sale" class="sale" style="width:100%">
             </div>
 
@@ -57,7 +57,7 @@
             </div>
             <div class="mySlides fade">
                 <img src="img/offers/offer1.jpg" alt="independence day sale" class="sale" style="width:100%">
-            </div>
+            </div>  -->
 
             <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
             <a class="next" onclick="plusSlides(1)">&#10095;</a>
@@ -70,7 +70,10 @@
             </div>
         </div>
     </section>
-    <section class="home__section">
+    <div id="categories-id">
+
+        </div>
+     <!-- <section class="home__section">
 
         <div class="row">
             <div class="product__box">
@@ -135,7 +138,7 @@
                 <button><span>Explore baby</span></button>
             </div>
         </div>
-    </section>
+    </section> -->
 
     <footer class="footer">
         <p>Copyright &copy; 2011-2018 Sabka Bazaar Grocery Supplies Pvt Ltd.</p>
@@ -143,10 +146,10 @@
     
 <!-- cart Modal -->
 
-<div id="myModal" class="modal">
+<div id="myModal" class="modal" role="dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <span class="close">&times;</span>
+                <button class="close" aria-label="close">&times;</button>
                 <h2>My Cart</h2>
             </div>
             <div class="modal-body">
@@ -187,8 +190,36 @@
         </div>
     </div>
 
-   
+    <script id="slider-template" type="text/x-handlebars-template">
+        {{#each banners}}
+        <img src="{{bannerImageUrl}}"alt="independence day sale" class="sale" style="width:100%"> {{/each}}
+    </script>
+    <script id="categories-template" type="text/x-handlebars-template">
+
+        {{#each categories}}
+         <section class="home__section">
+
+        <div class="row">
+            <div class="product__box">
+                <figure>
+                    <img src="{{imageUrl}}" alt="fruits & vegetables" class="product__items">
+                </figure>
+            </div>
+            <div class="product__content">
+                <h2>{{name}}</h2>
+                <p>{{description}}</p>
+                <button><span>Explore  {{key}}</span></button>
+            </div>
+
+        </div>
+    </section>
+
+        {{/each}}
+
+    </script>
 </body>
+
+
 <script>
 
 var slideIndex = 1;

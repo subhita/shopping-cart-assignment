@@ -8,7 +8,7 @@
 	@include max-width;
 }
 .mySlides {
-	display: none;
+	// display: none;
 }
 .prev {
 	@include prev-next;
@@ -17,6 +17,7 @@
 	@include prev-next;
 	right: 0;
 }
+
 .text {
 	@include text;
 	bottom: 8px;
@@ -42,7 +43,7 @@
 }
 
 .active {
-	background-color: #717171;
+	// background-color: #717171;
 }
 .fade {
 	-webkit-animation-name: fade;

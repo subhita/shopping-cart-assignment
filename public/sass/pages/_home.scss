@@ -6,11 +6,11 @@
 	@include max-width;
 	@include display-flex;
 	align-items: center;
+	flex-direction: row;
 }
 
 
-
-.home__section {
+ .home__section {
 	padding: 40px 0;
 	&:after {
 		content: '';
@@ -25,5 +25,11 @@
 		z-index: -1;
 		transform: translate(-50%);
 		margin-top: 19px;
+	}
+	
+	&:nth-child(even) {
+		.row {
+			flex-direction: row-reverse;
+		}
 	}
 }

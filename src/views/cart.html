@@ -49,14 +49,14 @@
                     <div class="cart__content__items">
                         <h3>Apple - Washington, Reguler, 4pcs</h3>
                         <div class="item__count">
-                            <button type="button" class="plus__count"><i class="fa fa-plus"></i></button>
-                            <input type="text" class="cart__counter" value="1">
-                            <button type="button" class="minus__count"><i class="fa fa-minus"></i></button>
-                            <i class="fa fa-close"></i>
+                            <button type="button" class="plus__count" aria-label="plus"><i class="fa fa-plus"></i></button>
+                            <input type="text" contenteditable="false" class="cart__counter" value="1" disabled>
+                            <button type="button" class="minus__count" aria-label="minus"><i class="fa fa-minus"></i></button>
+                            <span class="multiply" aria-label="multiplication">&times;</span>
                             <span>Rs 187</span>
                         </div>
                     </div>
-                    <div class="total__price">Rs 187</div>
+                    <div class="total__price" aria-label="total price">Rs 187</div>
                 </div>
                 <div class="cart__content__price">
                     <img src="img/lowest-price.png" alt="lowest price" class="lowest__price">
