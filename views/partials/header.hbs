@@ -1,31 +1,30 @@
- <header>
-        <nav>
-            <div class="row-container clearfix">
-                <img src="/static/images/logo_2x.png" alt="sabka-bazaar logo" class="logo">
+<header>
+    <nav>
+        <div class="row-container clearfix">
+            <img src="/static/images/logo_2x.png" alt="sabka-bazaar logo" class="logo">
 
-                <div class="hero__cart">
-                    <span class="hero__cart__box">
-                        <a href="/cart"  class="cart__on__hover" id="cart-modal">
-                            <img src="/static/images/cart.svg" alt="cart" class="cart">
-                            <p class="cart__count__item">{{cart.count}} items</p>
-                            {{!-- <p>items</p> --}}
-                        </a>
-                        <a class="icon" onclick="myFunction()">
-                            <i class="fa fa-bars"></i>
-                        </a>
-                    </span>
-                </div>
-                
-                <div class="hero__link__box mobile-nav" id="mobileNav">
-                    <ul class="main-nav">
-                        <li><a href="/">Home</a></li>
-                        <li><a href="/products">Products</a></li>
-                    </ul>
-                    <ul class="cart-nav">
-                        <li><a href="/login">Login</a></li>
-                        <li><a href="/register">Register</a></li>
-                    </ul>
-                </div>
+            <div class="hero__link__box mobile-nav" id="mobileNav">
+                <ul class="main-nav">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/products">Products</a></li>
+                </ul>
+                <ul class="cart-nav">
+                    <li><a href="/login">Login</a></li>
+                    <li><a href="/register">Register</a></li>
+                </ul>
             </div>
-        </nav>
-    </header>
+            <div class="hero__cart">
+                <span class="hero__cart__box">
+                    <a href="/cart" class="cart__on__hover" id="cart-modal">
+                        <img src="/static/images/cart.svg" alt="cart" class="cart">
+                        <p class="cart__count__item">{{cart.count}} </p>
+                        <p>items</p>
+                    </a>
+                    <a class="icon" id="bar">
+                        <i class="fa fa-bars"></i>
+                    </a>
+                </span>
+            </div>
+        </div>
+    </nav>
+</header>

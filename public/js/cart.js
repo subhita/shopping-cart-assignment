@@ -11,7 +11,7 @@ function postCartData(type, data) {
   
   const cartController = (function() {
     return {
-      updateItemCount: function(itemId, count, price, totalCount) {
+      updateItemCount: function(itemId, count, price, totalCount, totalPrice) {
         count = count || 0;
         if (count > 0) {
           document.querySelectorAll('span[data-id="' + itemId + '"]')[0].innerHTML = count;
@@ -23,6 +23,7 @@ function postCartData(type, data) {
           elem.parentNode.removeChild(elem);
         }
         document.getElementsByClassName('cart-header__text')[0].innerHTML = 'My Cart (' + totalCount + ' items)';
+        document.getElementsByClassName('button-price')[0].innerHTML = 'Rs.' + totalPrice;
       }
     };
   })();
@@ -34,13 +35,14 @@ function postCartData(type, data) {
           event.preventDefault();
           let productId = event.target.getAttribute('data-id');
           postCartData(elemsOperation.type, { productId: productId }).then(function(cart) {
-            cartCountElem.innerHTML = cart.count + ' items';
+            cartCountElem.innerHTML = cart.count;
             let cartProductDetail = cart.items.find(item => item.product.id === productId);
             cartController.updateItemCount(
               productId,
               cartProductDetail && cartProductDetail.count,
               cartProductDetail && cartProductDetail.product.price,
-              cart.count
+              cart.count,
+              cart.totalPrice
             );
           });
         });

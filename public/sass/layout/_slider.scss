@@ -1,3 +1,4 @@
+/* image slider */
 .slideshow-container {
 	img {
 		margin-left: auto;
@@ -6,9 +7,6 @@
 	}
 	position: relative;
 	@include max-width;
-}
-.mySlides {
-	// display: none;
 }
 .prev {
 	@include prev-next;
@@ -42,9 +40,6 @@
 	}
 }
 
-.active {
-	// background-color: #717171;
-}
 .fade {
 	-webkit-animation-name: fade;
 	-webkit-animation-duration: 1.5s;

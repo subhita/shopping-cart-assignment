@@ -1,6 +1,5 @@
 (function(buyItem, cartCountElem) {
     [].forEach.call(buyItem, element => {
-        console.log('hello')
       element.addEventListener('click', event => {
         event.preventDefault();
         fetch('/cart/add', {
@@ -13,7 +12,7 @@
         })
           .then(res => res.json())
           .then(function(cart) {
-            cartCountElem.innerHTML = cart.count + ' item';
+            cartCountElem.innerHTML = cart.count;
           });
       });
     });

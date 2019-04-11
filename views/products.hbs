@@ -61,37 +61,38 @@
 
 
 <section class="product__list__section">
-        <div class="product__list__container">
-            <div class="product__list" >
-                <ul id="menu">
-                    <input id="check01" type="checkbox" name="menu"  />
-                    <label for="check01">Product Menu</label>
-                    <ul class="submenu" role="group" aria-expanded="true">
-                          {{#each categories}}
-                        <li role="treeitem" aria-expanded="false">
-                            <a href="/products/{{this.id}}" class="active">{{this.name}}</a>
-                            </li>
-                           {{/each}}
-                    </ul>
+    <div class="product__list__container">
+        <div class="product__list">
+            <ul id="menu">
+                <input id="check01" type="checkbox" name="menu" />
+                <label for="check01">Product Menu</label>
+                <ul class="submenu" role="group" aria-expanded="true">
+                    {{#each categories}}
+                    <li role="treeitem" aria-expanded="false">
+                        <a href="/products/{{this.id}}" class="active">{{this.name}}</a>
+                    </li>
+                    {{/each}}
                 </ul>
-            </div>
-            <div class="product__item__container">
-                <div class="product__item__col">
-                     {{#each products}}
-                    <div class="product__list__item">
-                        <h5>{{ this.name }}</h5>
-                        <div class="pl__list">
-                            <figure>
-                                <img src="{{this.imageURL}}" alt="{{this.description}}" class="pl__list__item">
-                            </figure>
-                            <p>{{this.description}}</p>
-                            <div class="item__price">
-                                <a href="" class="btn plp-cart-buy__btn" id={{this.id}}>Buy Now<span>MRP Rs{{this.price}}</span></a>
-                            </div>
+            </ul>
+        </div>
+        <div class="product__item__container">
+            <div class="product__item__col">
+                {{#each products}}
+                <div class="product__list__item">
+                    <h5>{{ this.name }}</h5>
+                    <div class="pl__list">
+                        <figure>
+                            <img src="{{this.imageURL}}" alt="{{this.description}}" class="pl__list__item">
+                        </figure>
+                        <p>{{this.description}}</p>
+                        <div class="item__price">
+                            <a href="" class="btn plp-cart-buy__btn" id={{this.id}}>Buy Now<span>MRP
+                                    Rs{{this.price}}</span></a>
                         </div>
                     </div>
-                     {{/each}}
                 </div>
+                {{/each}}
+            </div>
         </div>
-    </section>
-    <script type="text/javascript" src="js/product.js"></script>
+</section>
+<script type="text/javascript" src="js/product.js"></script>

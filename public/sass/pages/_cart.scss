@@ -1,6 +1,5 @@
 
 .cart__container {
-	height: 100vh;
 	background-color: #e2d8d8;
 	display: flex;
 	flex-direction: column;
@@ -27,7 +26,7 @@
 }
 .cart__content__price {
 	@include position-bg;
-	margin-top: 16px;
+	margin: 16px 0px;
 	width: $width;
 	padding: 12px;
 	display: flex;
@@ -37,18 +36,13 @@
 	align-self: flex-end;
     padding: 24px;
 }
-.items {
-	// height: 60%;
-}
 .cart__checkout__btn {
 	left: 0;
-	// bottom: 0;
 	width: $width;
 	@include position-bg;
 	color: $color-secondary;
 	text-align: center;
 	padding: 10px 8px;
-	// top: 100%;
 
 	p {
 		text-align: center;
@@ -113,8 +107,6 @@
 	width: 100%;
 	height: 100%;
 	overflow: auto;
-	// background-color: rgba(0,0,0,0.4);
-
 	padding-top: 0;
 	margin-top: 85px;
 }
@@ -123,7 +115,6 @@
 	position: relative;
 	background-color: #fefefe;
 	margin: auto;
-	padding: 0;
 	border: 1px solid #888;
 	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
 	-webkit-animation-name: animatetop;
@@ -132,25 +123,21 @@
 	animation-duration: 0.4s;
 	height: 89vh;
 	width: 30%;
-
-
 	float: right;
     margin-top: 54px;
     padding-top: 0;
     margin: unset;
 }
 .close {
-	color: $color-secondary;
 	float: right;
-	font-size: 28px;
+	padding: 5px;
+	font-size: 16px;
 	font-weight: bold;
 	&:hover {
-		color: $color-secondary;
 		text-decoration: none;
 		cursor: pointer;
 	}
 	&:focus {
-		color: $color-secondary;
 		text-decoration: none;
 		cursor: pointer;
 	}
@@ -167,21 +154,13 @@
 }
 .cart__content__model img {
 	height: 0%;
-    width: 30%;
+    width: 18%;
 }
 .cart__content__model .total__price {
-
 		padding: 24px 10px;
-	
 }
 .modal-body {
-	// padding: 2px 16px;
-	// top: 50%;
-	// left: 50%;
-	// padding: 1px;
-	// transform: translate(-50%,-50%);
 	text-align: center;
-	// position: absolute;
 }
 .modal-footer {
 	padding: 2px 16px;
@@ -193,30 +172,36 @@
 	right: 0;
 	left: 0;
 	margin: 0 auto;
-}
-.modal-footer h3 {
-	text-align: center;
-  }
-  .modal-footer a {
+	h3 {
+		text-align: center;
+	  }
+	  a {
 	  text-decoration: none;
+	  color: $color-secondary;
   }
+}
 .item__count {
 	margin-top: 12px;
+	button {
+		background: $color-primary;
+		border: none;
+		padding: 2px 8px;
+		border-radius: 3px;
+		color: $color-secondary;
+		&:focus {
+			outline: none;
+		}
+	}
 }
-  .item__count button  {
-	background: #af4c83;
-    border: none;
-	padding: 2px 8px;
-	border-radius: 3px;
-	color: #fff;
-}
-.item__count button:focus {
-	outline: none;
-}
-
+  
 .cart__counter {
 	border: none;
     max-width: 1%;
 	margin: 0 14px;
 	background: none;
+}
+
+.product__img {
+	max-height: 140px;
+    padding: 0px 20px;
 }

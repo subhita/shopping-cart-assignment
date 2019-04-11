@@ -5,10 +5,8 @@
 	justify-content: space-around;
 	@include max-width;
 }
-.sign__in__content {
-	p {
+.sign__in__content p {
 		line-height: 60px;
-	}
 }
 .sign__in__form {
 	flex: 0 1 30%;
