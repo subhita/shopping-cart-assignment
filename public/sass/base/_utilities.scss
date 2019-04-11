@@ -79,7 +79,7 @@
 		max-width: 100%;
 	}
 	.logo {
-		height: 54px;
+		height: 55px;
 	}
 	.main-nav {
 		@include nav-li;
@@ -161,7 +161,8 @@
 	.sign__in__container {
 		margin: 20px;
 		flex-direction: column;
-		display: inline-block;
+		// display: inline-block;
+		align-items: inherit;
 	}
 	.product__list__container {
 		max-width: 480px;

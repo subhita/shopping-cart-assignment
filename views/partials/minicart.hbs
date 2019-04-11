@@ -7,7 +7,7 @@
         <div class="modal-body">
             {{#if cart.items}}
             {{#each cart.items}}
-            <div class="cart__content__model cart__content__item">
+            <div class="cart__content__model cart__content__item" data-id="{{product.id}}">
                 <img src="{{product.imageURL}}" alt="{{product.name}}" class="items">
                 <div class="cart__content__items">
                     <h5>{{product.name}}</h5>

@@ -1,64 +1,3 @@
-{{!-- <section class="plp-section">
-    <div class="container ">
-        <div class="wrapper">
-            <div class="custom-select mt-15 xs-show">
-                <select>
-
-                    {{#each categories}}
-
-                    <option value="0">{{ this.name }}</option>
-
-                    {{/each}}
-
-                </select>
-
-            </div>
-
-            <nav class="plp-nav">
-
-                <ul class="xs-hide">
-
-                    {{#each categories}}
-
-                    <li><a href="/product/{{ this.id }}" class="active" data="{{ this.id }}"> {{ this.name }}</a></li>
-
-                    {{/each}}
-
-                </ul>
-
-            </nav>
-
-            <main class="mt-20 mb-20">
-
-                <div class="flex-grid">
-                    {{#each prodHbs}}
-                    <div class="plp-list">
-                        <h2>{{ this.name }}</h2>
-                        <div class="product">
-                            <img src="{{this.imageURL}}" alt="{{this.description}}">
-                            <div class="prodct-info">
-                                <p>{{this.description}}</p>
-                                <div class="product-mrp ">
-                                    <span class="xs-hide sm-hide">MRP Rs. {{this.price}}</span>
-                                    <button>Buy Now<span class="xs-show sm-show"> @ MRP Rs.
-                                            {{this.price}}</span></button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    {{/each}}
-                </div>
-
-            </main>
-
-        </div>
-
-    </div>
-
-</section> --}}
-
-
-
 
 <section class="product__list__section">
     <div class="product__list__container">
@@ -95,4 +34,4 @@
             </div>
         </div>
 </section>
-<script type="text/javascript" src="js/product.js"></script>
+<script type="text/javascript" src="/js/product.js"></script>

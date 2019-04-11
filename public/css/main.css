@@ -613,7 +613,7 @@ input:focus ~ label {
     flex: 100%;
     max-width: 100%; }
   .logo {
-    height: 54px; }
+    height: 55px; }
   .main-nav {
     float: none;
     position: inherit;
@@ -687,7 +687,7 @@ input:focus ~ label {
   .sign__in__container {
     margin: 20px;
     flex-direction: column;
-    display: inline-block; }
+    align-items: inherit; }
   .product__list__container {
     max-width: 480px;
     flex-direction: column; }
