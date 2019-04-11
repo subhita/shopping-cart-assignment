@@ -14,12 +14,12 @@ function postCartData(type, data) {
       updateItemCount: function(itemId, count, price, totalCount) {
         count = count || 0;
         if (count > 0) {
-          document.querySelectorAll('button[data-id="' + itemId + '"]')[0].innerHTML = count;
+          document.querySelectorAll('span[data-id="' + itemId + '"]')[0].innerHTML = count;
           document.querySelectorAll(
-            'span[class="total__price"][data-id="' + itemId + '"]'
+            'div[class="total__price"][data-id="' + itemId + '"]'
           )[0].innerHTML = 'Rs.' + price * count;
         } else {
-          let elem = document.querySelectorAll('div[class="cart-item"][data-id="' + itemId + '"]')[0];
+          let elem = document.querySelectorAll('div[class="cart__content__item"][data-id="' + itemId + '"]')[0];
           elem.parentNode.removeChild(elem);
         }
         document.getElementsByClassName('cart-header__text')[0].innerHTML = 'My Cart (' + totalCount + ' items)';
@@ -48,7 +48,7 @@ function postCartData(type, data) {
     });
   })(
     document.getElementsByClassName('minus__count'),
-    document.getElementsByClassName('fa-plus'),
+    document.getElementsByClassName('plus__count'),
     document.getElementsByClassName('cart__count__item')[0],
     cartController
   );

@@ -1,0 +1,70 @@
+
+<div id="myModal" class="modal" role="dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button class="close" aria-label="close">&times;</button>
+                <h2>My Cart</h2>
+            </div>
+            <div class="modal-body">
+               
+                {{#if cart.items}}
+                 {{#each cart.items}}
+                <div class="cart__content__model cart__content__item">
+                            <img src="{{product.imageURL}}" alt="{{product.name}}" class="items">
+                        <div class="cart__content__items">
+                            <h4>{{product.name}}</h4>
+                            <div class="item__count">
+                                <button type="button" class="plus__count" aria-label="plus" data-id="{{product.id}}">&#43;</button>
+                            <span  class="cart__counter" data-id="{{product.id}}">{{count}}</span>
+                            <button type="button" class="minus__count" aria-label="minus" data-id="{{product.id}}">&#45;</button>
+                            <span class="multiply" aria-label="multiplication">&times;</span>
+                            <span>Rs {{product.price}}</span>
+                            </div>
+                        </div>
+                        <div class="total__price" aria-label="total price" data-id="{{product.id}}">Rs {{multiply product.price count}} </div>
+                    </div>
+                     {{/each}}
+                     {{else}}
+                        <h3>No item in your Cart</h3>
+                <p>Your favourite item are just a click away</p>
+                 {{/if}}
+                      
+            </div>
+            <div class="modal-footer">
+                {{#if cart.items}}
+                <a href="/cart"><h3>Proceed to checkout</h3>
+                 {{else}}
+                 <a href="/products"><h3>Start Shopping</h3>
+                 {{/if}}
+            </div>
+        </div>
+    </div>
+
+
+    <script type="text/javascript" src="js/cart.js"></script>
+    <script>
+        // modal
+        var modal = document.getElementById('myModal');
+        // Get the button that opens the modal
+        var btn = document.getElementById("cart-modal");
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks the button, open the modal
+        btn.onmouseover = function () {
+            modal.style.display = "block";
+        }
+       
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+
+    // When the user clicks anywhere outside of the modal, close it
+        window.onmouseover = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+        </script>

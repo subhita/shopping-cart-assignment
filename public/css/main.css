@@ -323,16 +323,11 @@ li a {
   background: #af4c83;
   border: none;
   padding: 2px 8px;
-  border-radius: 3px; }
+  border-radius: 3px;
+  color: #fff; }
 
 .item__count button:focus {
   outline: none; }
-
-.item__count button .fa-plus, .fa-minus {
-  color: #fff; }
-
-.item__count .fa-close {
-  margin: 0px 12px; }
 
 .cart__counter {
   border: none;
