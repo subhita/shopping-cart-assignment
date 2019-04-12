@@ -150,15 +150,17 @@
 .cart__content__model {
 	display: flex;
 	border-bottom: $border-bottom;
-    padding: 10px;
-}
-.cart__content__model img {
-	height: 0%;
-    width: 18%;
-}
-.cart__content__model .total__price {
+	padding: 10px;
+	img {
+		height: 0%;
+		width: 18%;
+	}
+	.total__price {
 		padding: 24px 10px;
 }
+}
+
+
 .modal-body {
 	text-align: center;
 }

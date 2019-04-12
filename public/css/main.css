@@ -285,13 +285,11 @@ li a {
   display: flex;
   border-bottom: 1px solid #efefef;
   padding: 10px; }
-
-.cart__content__model img {
-  height: 0%;
-  width: 18%; }
-
-.cart__content__model .total__price {
-  padding: 24px 10px; }
+  .cart__content__model img {
+    height: 0%;
+    width: 18%; }
+  .cart__content__model .total__price {
+    padding: 24px 10px; }
 
 .modal-body {
   text-align: center; }
@@ -355,23 +353,6 @@ li a {
     font-size: 16px;
     margin: 4px 2px;
     cursor: pointer; }
-    .product__content button span {
-      cursor: pointer;
-      display: inline-block;
-      position: relative;
-      transition: 0.5s; }
-      .product__content button span:after {
-        content: '\00bb';
-        position: absolute;
-        opacity: 0;
-        top: 0;
-        right: -20px;
-        transition: 0.5s; }
-    .product__content button:hover span {
-      padding-right: 20px; }
-      .product__content button:hover span:after {
-        opacity: 1;
-        right: 0; }
 
 .product__list {
   flex: 0 0 30%;
@@ -502,9 +483,6 @@ input:focus ~ label {
   border-radius: 0 3px 3px 0;
   user-select: none;
   border-radius: 3px 0 0 3px; }
-  .prev:hover {
-    background-color: rgba(0, 0, 0, 0.8);
-    color: #fff; }
 
 .next {
   cursor: pointer;
@@ -521,9 +499,14 @@ input:focus ~ label {
   user-select: none;
   border-radius: 3px 0 0 3px;
   right: 0; }
-  .next:hover {
-    background-color: rgba(0, 0, 0, 0.8);
-    color: #fff; }
+
+.mySlides:hover ~ .prev {
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff; }
+
+.mySlides:hover ~ .next {
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff; }
 
 .text {
   color: #f2f2f2;

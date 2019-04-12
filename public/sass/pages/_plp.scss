@@ -23,29 +23,6 @@
 		font-size: 16px;
 		margin: 4px 2px;
 		cursor: $cursor;
-		span {
-			cursor: $cursor;
-			display: inline-block;
-			position: relative;
-			transition: 0.5s;
-			&:after {
-				content: '\00bb';
-				position: absolute;
-				opacity: 0;
-				top: 0;
-				right: -20px;
-				transition: 0.5s;
-			}
-		}
-		&:hover {
-			span {
-				padding-right: 20px;
-				&:after {
-					opacity: 1;
-					right: 0;
-				}
-			}
-		}
 	}
 }
 .product__list {

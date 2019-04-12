@@ -15,7 +15,20 @@
 	@include prev-next;
 	right: 0;
 }
-
+.mySlides {
+	&:hover {
+		~ {
+			.prev {
+				background-color: rgba(0,0,0,0.8);
+				color: $color-secondary;
+			}
+			.next {
+				background-color: rgba(0,0,0,0.8);
+				color: $color-secondary;
+			}
+		}
+	}
+}
 .text {
 	@include text;
 	bottom: 8px;
