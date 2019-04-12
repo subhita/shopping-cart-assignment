@@ -18,7 +18,7 @@
                 </div>
             </div>
             <div class="total__price" aria-label="total price" data-id="{{product.id}}">Rs
-                {{multiply product.price count}} </div>
+                {{math product.price "*" count}} </div>
         </div>
         {{/each}}
         <div class="cart__content__price">

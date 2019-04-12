@@ -17,15 +17,15 @@
         <div class="product__item__container">
             <div class="product__item__col">
                 {{#each products}}
-                <div class="product__list__item">
-                    <h5>{{ this.name }}</h5>
+                <div class="product__list__item" >
+                    <h5 tabindex="0">{{ this.name }}</h5>
                     <div class="pl__list">
                         <figure>
-                            <img src="{{this.imageURL}}" alt="{{this.description}}" class="pl__list__item">
+                            <img src="{{this.imageURL}}" alt="{{this.description}}" class="pl__list__item" tabindex="0">
                         </figure>
-                        <p>{{this.description}}</p>
+                        <p tabindex="0">{{this.description}}</p>
                         <div class="item__price">
-                            <a href="" class="btn plp-cart-buy__btn" id={{this.id}}>Buy Now<span>MRP
+                            <a href="" class="btn plp-cart-buy__btn" role="button" id={{this.id}}>Buy Now<span>MRP
                                     Rs{{this.price}}</span></a>
                         </div>
                     </div>

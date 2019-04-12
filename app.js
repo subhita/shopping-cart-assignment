@@ -52,8 +52,5 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
-hbs.registerHelper("multiply", function(a, b){
-  return a * b;
-  }); 
 
 module.exports = app;

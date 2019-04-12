@@ -1,13 +1,13 @@
 
-    <section class="home__section">
+    <section class="home__section" tabindex="0">
         <div class="slideshow-container">
             <div class="mySlides fade" id="slider">
             {{#each banners}}
                         <img src="{{this.bannerImageUrl}}" alt="{{this.bannerImageAlt}}" class="sale" style="width:100%">
                     {{/each}}
             </div>
-            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            <a class="prev" role="button" title="previous" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" role="button" title="next" onclick="plusSlides(1)">&#10095;</a>
             <div style="text-align:center">
                  {{#each banners}}
                   <span class="dot" onclick="currentDiv({{math @index "+" 1}})"></span>
@@ -15,18 +15,18 @@
             </div>
         </div>
     </section>
-    <div id="category__id" >
+    <div id="category__id">
      {{#each categories}}
-        <section class="home__section">
+        <section class="home__section" >
             <div class="row">
                 <div class="product__box">
                     <figure>
-                        <img src="{{this.imageUrl}}" alt="{{this.name}}" class="product__items">
+                        <img src="{{this.imageUrl}}" alt="{{this.name}}" class="product__items" tabindex="0">
                     </figure>
                 </div>
-                <div class="product__content">
-                    <h2>{{this.name}}</h2>
-                    <p>{{this.description}}</p>
+                <div class="product__content" >
+                    <h2 tabindex="0">{{this.name}}</h2>
+                    <p tabindex="0">{{this.description}}</p>
                     <button>Explore {{this.key}}</button>
                 </div>
             </div>
