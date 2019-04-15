@@ -23,7 +23,7 @@ function postCartData(type, data) {
           elem.parentNode.removeChild(elem);
         }
         document.getElementsByClassName('cart-header__text')[0].innerHTML = 'My Cart (' + totalCount + ' items)';
-        document.getElementsByClassName('button-price')[0].innerHTML = 'Rs.' + totalPrice;
+        document.getElementsByClassName('button__price')[0].innerHTML = 'Rs.' + totalPrice;
       }
     };
   })();
