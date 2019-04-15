@@ -1,18 +1,18 @@
-<section class="sign__section">
-    <div class="sign__in__container">
-        <div class="sign__in__content" tabindex="0">
+<section>
+    <div class="signin">
+        <div class="signin__content" tabindex="0">
             <h2>Signup</h2>
             <p>We do not share your personal details with anyone.</p>
         </div>
-        <div class="sign__in__form">
+        <div class="signin__form">
             <form>
                  {{#each registerData}}
-                <div class="form__input">
+                <div class="signin__form__input">
                     <input type="{{type}}" name="{{label}}" required>
                     <label>{{label}}</label>
                 </div>
                 {{/each}}
-                <div class="form__input">
+                <div class="signin__form__input">
                     <button>Signup</button>
                 </div>
             </form>

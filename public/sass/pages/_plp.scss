@@ -25,7 +25,7 @@
 		cursor: $cursor;
 	}
 }
-.product__list {
+.product__container__list {
 	ul {
 		list-style: none;
 		display: flex;
@@ -53,21 +53,21 @@
 		}
 	}
 }
-.product__list__section {
+.product {
 	padding: 0px;
 }
-.product__list__container {
+.product__container {
 	display: flex;
 	@include max-width;
 }
-.product__item__col {
+.product__container__item__col {
 	display: flex;
     flex-wrap: wrap;
 }
 .pl__list {
 	border-bottom: $border-bottom;
 }
-.product__list__item {
+.product__container__list__item {
 	padding: 16px;
 	flex: 0 0 25%;
 	flex-direction: column;

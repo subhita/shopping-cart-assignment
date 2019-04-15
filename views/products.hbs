@@ -1,7 +1,6 @@
-
-<section class="product__list__section">
-    <div class="product__list__container">
-        <div class="product__list">
+<section class="product">
+    <div class="product__container">
+        <div class="product__container__list">
             <ul id="menu">
                 <input id="check01" type="checkbox" name="menu" />
                 <label for="check01">Product Menu</label>
@@ -14,10 +13,10 @@
                 </ul>
             </ul>
         </div>
-        <div class="product__item__container">
-            <div class="product__item__col">
+        <div class="product__container__item">
+            <div class="product__container__item__col">
                 {{#each products}}
-                <div class="product__list__item" >
+                <div class="product__container__list__item">
                     <h5 tabindex="0">{{ this.name }}</h5>
                     <div class="pl__list">
                         <figure>
@@ -33,5 +32,6 @@
                 {{/each}}
             </div>
         </div>
+    </div>
 </section>
 <script type="text/javascript" src="/js/product.js"></script>

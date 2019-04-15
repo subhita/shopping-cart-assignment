@@ -1,18 +1,18 @@
 <section>
-    <div class="log__in__container">
-        <div class="log__in__content">
+    <div class="login">
+        <div class="login__content">
             <h2  tabindex="0">Login</h2>
             <p  tabindex="0">Get access to your Orders, Wishlist and Recommendations.</p>
         </div>
-        <div class="log__in__form">
+        <div class="login__form">
             <form>
                 {{#each loginData}}
-                <div class="form__input">
+                <div class="login__form__input">
                     <input type="{{type}}" name="{{label}}" required>
                     <label>{{label}}</label>
                 </div>
                 {{/each}}
-                <div class="form__input">
+                <div class="login__form__input">
                     <button type="submit">Login</button>
                 </div>
             </form>

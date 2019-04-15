@@ -60,22 +60,25 @@ nav {
   height: 78px;
   padding: 3px; }
 
+.banners {
+  text-align: center; }
+
 .cart {
   height: 32px;
   width: auto;
   margin-top: 16px; }
 
-.main-nav {
+.header__list__left {
   float: left;
   position: absolute;
   left: 24%;
   top: 48%;
   display: flex;
   list-style: none; }
-  .main-nav li:last-child {
+  .header__list__left li:last-child {
     margin-left: 32px; }
 
-.cart-nav {
+.header__list__right {
   float: right;
   position: absolute;
   left: 88%;
@@ -83,16 +86,16 @@ nav {
   display: flex;
   display: flex;
   list-style: none; }
-  .cart-nav li:last-child {
+  .header__list__right li:last-child {
     margin-left: 32px; }
 
-.hero__cart {
+.header__cart {
   float: left;
   position: absolute;
   left: 88%;
   top: 28%; }
 
-.hero__cart__box a {
+.header__cart__box a {
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -102,7 +105,7 @@ nav {
   text-decoration: none;
   color: black; }
 
-.hero__cart__box .icon {
+.header__cart__box .icon {
   display: none;
   color: #fff;
   text-decoration: none; }
@@ -113,7 +116,7 @@ li a {
 .icon .fa {
   color: #af4c83; }
 
-.row-container {
+.header {
   max-width: 1140px;
   margin: 0 auto 0 auto;
   position: relative; }
@@ -354,100 +357,100 @@ li a {
     margin: 4px 2px;
     cursor: pointer; }
 
-.product__list {
+.product__container__list {
   flex: 0 0 30%;
   background-color: #e2d8d8; }
-  .product__list ul {
+  .product__container__list ul {
     list-style: none;
     display: flex;
     flex-direction: column; }
-    .product__list ul li {
+    .product__container__list ul li {
       align-self: flex-end;
       padding: 12px 10px;
       border-bottom: 1px solid #efefef;
       width: 95%;
       text-align: center; }
-      .product__list ul li a {
+      .product__container__list ul li a {
         text-decoration: none;
         color: #000; }
-  .product__list ul#menu input {
+  .product__container__list ul#menu input {
     display: none; }
-  .product__list ul#menu label {
+  .product__container__list ul#menu label {
     display: none; }
 
-.product__list__section {
+.product {
   padding: 0px; }
 
-.product__list__container {
+.product__container {
   display: flex;
   max-width: 1140px;
   margin: 0 auto 0 auto; }
 
-.product__item__col {
+.product__container__item__col {
   display: flex;
   flex-wrap: wrap; }
 
 .pl__list {
   border-bottom: 1px solid #efefef; }
 
-.product__list__item {
+.product__container__list__item {
   padding: 16px;
   flex: 0 0 25%;
   flex-direction: column;
   display: flex;
   justify-content: space-between; }
-  .product__list__item p {
+  .product__container__list__item p {
     padding: 8px;
     background: #e2d8d8;
     font-size: 12px;
     border-radius: 2px;
     height: 100px;
     overflow: hidden; }
-  .product__list__item figure img {
+  .product__container__list__item figure img {
     width: 100%;
     display: block;
     padding: 8px 0px; }
-  .product__list__item h5 {
+  .product__container__list__item h5 {
     min-height: 45px; }
 
-.log__in__container {
+.login {
   display: flex;
   align-items: center;
   justify-content: space-around;
   max-width: 1140px;
   margin: 0 auto 0 auto; }
 
-.log__in__content p {
+.login__content p {
   line-height: 60px; }
 
-.log__in__form {
+.login__form {
   flex: 0 1 30%; }
 
-.sign__in__container {
+.signin {
   display: flex;
   align-items: center;
   justify-content: space-around;
   max-width: 1140px;
   margin: 0 auto 0 auto; }
 
-.sign__in__content p {
+.signin__content p {
   line-height: 60px; }
 
-.sign__in__form {
+.signin__form {
   flex: 0 1 30%; }
 
-.form__input {
+.login__form__input, .signin__form__input {
   margin: 24px 0px;
   position: relative; }
-  .form__input input {
+  .login__form__input input, .signin__form__input input {
     border: none;
     border-bottom: 1px solid #efefef;
     padding: 8px 0px;
     width: -webkit-fill-available; }
-    .form__input input:focus {
+    .login__form__input input:focus, .signin__form__input input:focus {
       outline: none;
       border-bottom: 2px solid #4ae4ec; }
-  .form__input button {
+  .login__form__input button, .signin__form__input button {
     background-color: #af4c83;
     border: none;
     color: #fff;
@@ -455,7 +458,7 @@ li a {
     width: 100%;
     margin: 4px 2px;
     cursor: pointer; }
-    .form__input button:focus {
+    .login__form__input button:focus, .signin__form__input button:focus {
       outline: none; }
 
 label {
@@ -563,11 +566,11 @@ input:focus ~ label {
     font-size: 11px; } }
 
 @media screen and (max-width: 768px) {
-  .cart-nav {
+  .header__list__right {
     left: 76%; }
-  .hero__cart {
+  .header__cart {
     left: 76%; }
-  .main-nav {
+  .header__list__left {
     left: 34%; }
   .row {
     max-width: 750px; }
@@ -584,12 +587,12 @@ input:focus ~ label {
       font-size: 14px; }
       .item__price .btn span::before {
         content: " @ "; }
-  .product__list__item {
+  .product__container__list__item {
     flex: 0 0 50%; }
   .pl__list figure {
     width: 50%;
     float: left; }
-  .product__list__item p {
+  .product__container__list__item p {
     width: 50%;
     float: right;
     min-height: 155px; } }
@@ -601,56 +604,56 @@ input:focus ~ label {
     line-height: 24px;
     font-size: 12px;
     padding: 0px 4px; }
-  .product__list__item {
+  .product__container__list__item {
     flex: 0 0 100%; }
-  .product__item__col {
+  .product__container__item {
     flex: 100%;
     max-width: 100%; }
   .logo {
     height: 55px; }
-  .main-nav {
+  .header__list__left {
     float: none;
     position: inherit;
     display: inline;
     list-style: none; }
-    .main-nav li {
+    .header__list__left li {
       background-color: #e2d8d8; }
-      .main-nav li:last-child {
+      .header__list__left li:last-child {
         margin-left: 0px; }
-    .main-nav .cart-nav .responsive {
+    .header__list__left .header__list__right .responsive {
       position: relative; }
-      .main-nav .cart-nav .responsive a {
+      .header__list__left .header__list__right .responsive a {
         float: none;
         display: block;
         text-align: left; }
-  .cart-nav {
+  .header__list__right {
     float: none;
     position: inherit;
     display: inline;
     list-style: none; }
-    .cart-nav li {
+    .header__list__right li {
       background-color: #e2d8d8; }
-      .cart-nav li:last-child {
+      .header__list__right li:last-child {
         margin-left: 0px; }
-  .hero__cart {
+  .header__cart {
     background-color: #e2d8d8;
     float: right;
     position: absolute;
     left: 80%;
     top: 0%; }
-  .hero__cart__box {
+  .header__cart__box {
     display: flex;
     align-items: center;
     justify-content: center; }
-    .hero__cart__box a {
+    .header__cart__box a {
       position: relative; }
-    .hero__cart__box p {
+    .header__cart__box p {
       position: absolute;
       left: 65%;
       top: 10%; }
-      .hero__cart__box p:last-child {
+      .header__cart__box p:last-child {
         display: none; }
-    .hero__cart__box a.icon {
+    .header__cart__box a.icon {
       display: block;
       margin-top: 20px; }
   .topnav.responsive .icon {
@@ -675,22 +678,22 @@ input:focus ~ label {
         box-shadow: 0 -1px rgba(0, 0, 0, 0.5) inset;
         transition: background .3s;
         white-space: nowrap; }
-  .hero__link__box {
+  .header__list {
     background: #e2d8d8;
     display: none; }
-  .sign__in__container, .log__in__container {
+  .signin, .login {
     margin: 20px;
     flex-direction: column;
     align-items: inherit; }
-  .product__list__container {
+  .product__container {
     max-width: 480px;
     flex-direction: column; }
-  .product__item__container {
+  .product__container__item {
     flex-wrap: nowrap;
     flex-direction: column; }
-  .product__list {
+  .product__container__list {
     height: auto; }
-    .product__list ul#menu label {
+    .product__container__list ul#menu label {
       position: relative;
       display: block;
       pointer-events: auto;
@@ -698,13 +701,13 @@ input:focus ~ label {
       line-height: 3em;
       transition: background 0.3s;
       cursor: pointer; }
-    .product__list ul#menu input {
+    .product__container__list ul#menu input {
       display: none; }
-    .product__list ul li {
+    .product__container__list ul li {
       align-self: center;
       padding: 0%;
       border: none; }
-  .product__list__item p {
+  .product__container__list__item p {
     font-size: 14px;
     min-height: 180px;
     line-height: 24px; }

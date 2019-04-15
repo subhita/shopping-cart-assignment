@@ -8,7 +8,7 @@
             </div>
             <a class="prev" role="button" title="previous" onclick="plusSlides(-1)">&#10094;</a>
             <a class="next" role="button" title="next" onclick="plusSlides(1)">&#10095;</a>
-            <div style="text-align:center">
+            <div class="banners">
                  {{#each banners}}
                   <span class="dot" onclick="currentDiv({{math @index "+" 1}})"></span>
                  {{/each}}

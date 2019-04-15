@@ -1,13 +1,13 @@
 
 
-.log__in__container {
+.login {
 	@include  flex-align-items;
 	justify-content: space-around;
 	@include max-width;
 }
-.log__in__content p {
+.login__content p {
 		line-height: 60px;
 }
-.log__in__form {
+.login__form {
 	flex: 0 1 30%;
 }

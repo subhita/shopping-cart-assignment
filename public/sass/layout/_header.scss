@@ -6,30 +6,33 @@ nav {
 	height: 78px;
 	padding: 3px;
 }
+.banners {
+	text-align: center;
+}
 .cart {
 	height: 32px;
 	width: auto;
 	margin-top: 16px;
 }
-.main-nav {
+.header__list__left {
 	@include position($float-left);
 	left: 24%;
 	top: 48%;
 	@include li-last-child;
 }
-.cart-nav {
+.header__list__right {
 	@include position($float-right);
 	left: 88%;
 	top: 4%;
 	display: flex;
 	@include li-last-child;
 }
-.hero__cart {
+.header__cart {
 	@include position($float-left);
 	left: 88%;
 	top: 28%;
 }
-.hero__cart__box {
+.header__cart__box {
 	a {
 		@include  flex-align-items;
 		justify-content: flex-start;

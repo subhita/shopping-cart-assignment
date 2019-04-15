@@ -1,21 +1,20 @@
 <header>
     <nav>
-        <div class="row-container">
+        <div class="header">
             <img src="/static/images/logo_2x.png" alt="sabka-bazaar logo" class="logo">
-
-            <div class="hero__link__box mobile-nav" id="mobileNav">
-                <ul class="main-nav">
+            <div class="header__list mobile-nav" id="mobileNav">
+                <ul class="header__list__left">
                     <li><a href="/">Home</a></li>
                     <li><a href="/products">Products</a></li>
                 </ul>
-                <ul class="cart-nav">
+                <ul class="header__list__right">
                     <li><a href="/login">Login</a></li>
                     <li><a href="/register">Register</a></li>
                 </ul>
             </div>
-            <div class="hero__cart">
-                <span class="hero__cart__box">
-                    <a href="/cart" class="cart__on__hover" id="cart-modal">
+            <div class="header__cart">
+                <span class="header__cart__box">
+                    <a href="/cart" class="header__cart__on__hover" id="cart-modal">
                         <img src="/static/images/cart.svg" alt="cart" class="cart">
                         <p class="cart__count__item">{{cart.count}} </p>
                         <p>items</p>
