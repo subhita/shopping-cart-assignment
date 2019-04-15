@@ -1,19 +1,19 @@
 <section>
-    <div class="cart__container">
-        <div class="cart__content">
-            <h2>My Cart</h2><span class="cart-header__text">({{cart.count}} items)</span>
+    <div class="cart">
+        <div class="cart__header">
+            <h2>My Cart</h2><span class="cart__header__text">({{cart.count}} items)</span>
         </div>
         {{#each cart.items}}
-        <div class="cart__content__item" data-id="{{product.id}}">
+        <div class="cart__item" data-id="{{product.id}}">
             <img src="{{product.imageURL}}" alt="{{product.name}}" class="items product__img">
-            <div class="cart__content__items">
+            <div class="cart__item__content">
                 <h3>{{product.name}}</h3>
-                <div class="item__count">
-                    <button type="button" class="plus__count" aria-label="plus" data-id="{{product.id}}">&#43;</button>
+                <div class="cart__item__content__count">
+                    <button type="button" class="cart__item__content__count__plus" aria-label="plus" data-id="{{product.id}}">&#43;</button>
                     <span class="cart__counter" data-id="{{product.id}}">{{count}}</span>
-                    <button type="button" class="minus__count" aria-label="minus"
+                    <button type="button" class="cart__item__content__count__minus" aria-label="minus"
                         data-id="{{product.id}}">&#45;</button>
-                    <span class="multiply" aria-label="multiplication">&times;</span>
+                    <span class="cart__item__content__count__multiply" aria-label="multiplication">&times;</span>
                     <span>Rs {{product.price}}</span>
                 </div>
             </div>

@@ -1,10 +1,10 @@
 
-.cart__container {
+.cart {
 	background-color: #e2d8d8;
 	display: flex;
 	flex-direction: column;
 }
-.cart__content {
+.cart__header {
 	@include position-bg;
 	margin-top: 24px;
 	width: $width;
@@ -12,7 +12,7 @@
 	display: flex;
 	align-items: baseline;
 }
-.cart__content__item {
+.cart__item {
 	@include position-bg;
 	margin-top: 16px;
 	width: $width;
@@ -21,7 +21,7 @@
 		align-self: center;
 	}
 }
-.cart__content__items {
+.cart__item__content {
 	flex: 1;
 }
 .cart__content__price {

@@ -19,10 +19,10 @@ function postCartData(type, data) {
             'div[class="total__price"][data-id="' + itemId + '"]'
           )[0].innerHTML = 'Rs.' + price * count;
         } else {
-          let elem = document.querySelectorAll('div[class="cart__content__item"][data-id="' + itemId + '"]')[0];
+          let elem = document.querySelectorAll('div[class="cart__item"][data-id="' + itemId + '"]')[0];
           elem.parentNode.removeChild(elem);
         }
-        document.getElementsByClassName('cart-header__text')[0].innerHTML = 'My Cart (' + totalCount + ' items)';
+        document.getElementsByClassName('cart__header__text')[0].innerHTML = 'My Cart (' + totalCount + ' items)';
         document.getElementsByClassName('button__price')[0].innerHTML = 'Rs.' + totalPrice;
       }
     };
@@ -49,8 +49,8 @@ function postCartData(type, data) {
       });
     });
   })(
-    document.getElementsByClassName('minus__count'),
-    document.getElementsByClassName('plus__count'),
+    document.getElementsByClassName('cart__item__content__count__minus'),
+    document.getElementsByClassName('cart__item__content__count__plus'),
     document.getElementsByClassName('cart__count__item')[0],
     cartController
   );
