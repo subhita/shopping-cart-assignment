@@ -410,6 +410,19 @@ li a {
   .product__list__item h5 {
     min-height: 45px; }
 
+.log__in__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  max-width: 1140px;
+  margin: 0 auto 0 auto; }
+
+.log__in__content p {
+  line-height: 60px; }
+
+.log__in__form {
+  flex: 0 1 30%; }
+
 .sign__in__container {
   display: flex;
   align-items: center;
@@ -449,9 +462,7 @@ label {
   top: 0px;
   position: absolute;
   pointer-events: none;
-  transition: 0.2s ease all;
-  -moz-transition: 0.2s ease all;
-  -webkit-transition: 0.2s ease all; }
+  transition: 0.2s ease all; }
 
 input:focus ~ label {
   top: -40%;
