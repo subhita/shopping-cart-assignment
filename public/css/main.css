@@ -678,7 +678,7 @@ input:focus ~ label {
   .hero__link__box {
     background: #e2d8d8;
     display: none; }
-  .sign__in__container {
+  .sign__in__container, .log__in__container {
     margin: 20px;
     flex-direction: column;
     align-items: inherit; }

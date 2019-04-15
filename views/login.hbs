@@ -6,14 +6,12 @@
         </div>
         <div class="log__in__form">
             <form>
+                {{#each loginData}}
                 <div class="form__input">
-                    <input type="email" name="email" id="email" required>
-                    <label>Email</label>
+                    <input type="{{type}}" name="{{label}}" required>
+                    <label>{{label}}</label>
                 </div>
-                <div class="form__input">
-                    <input type="password" name="password" id="password" required>
-                    <label>Password</label>
-                </div>
+                {{/each}}
                 <div class="form__input">
                     <button type="submit">Login</button>
                 </div>

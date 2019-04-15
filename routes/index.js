@@ -3,6 +3,8 @@ const router = express.Router();
 const banners = require('../public/data/banners/index.get.json');
 const prodCategories = require('../public/data/categories/index.get.json');
 const products = require('../public/data/products/index.get.json');
+const loginData = require('../public/data/labels/login.get.json');
+const registerData = require('../public/data/labels/register.get.json');
 
 const cart = {
   items: [],
@@ -41,12 +43,12 @@ router.get('/products/:id', function (req, res, next) {
 
 /* GET login page route. */
 router.get('/login', function (req, res, next) {
-  res.render('login', { cart });
+  res.render('login', { cart, loginData });
 });
 
 /* GET register page route. */
 router.get('/register', function (req, res, next) {
-  res.render('register', { cart });
+  res.render('register', { cart, registerData });
 });
 
 /* GET cart page route. */
