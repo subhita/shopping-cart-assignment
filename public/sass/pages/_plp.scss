@@ -8,23 +8,7 @@
 .submenu li:active {
 	background-color: $color-primary;
 }
-.product__content {
-	text-align: center;
-	flex: 1;
-	p {
-		line-height: 60px;
-		font-size: 16px;
-	}
-	button {
-		background-color: $color-primary;
-		border: none;
-		color: $color-secondary;
-		padding: 12px 20px;
-		font-size: 16px;
-		margin: 4px 2px;
-		cursor: $cursor;
-	}
-}
+
 .product__container__list {
 	ul {
 		list-style: none;
@@ -55,39 +39,59 @@
 }
 .product {
 	padding: 0px;
+	&__container {
+		display: flex;
+		@include max-width;
+	}
+	&__container__item__col {
+		display: flex;
+		flex-wrap: wrap;
+	}
+	&__content {
+		text-align: center;
+		flex: 1;
+		p {
+			line-height: 60px;
+			font-size: 16px;
+		}
+		button {
+			background-color: $color-primary;
+			border: none;
+			color: $color-secondary;
+			padding: 12px 20px;
+			font-size: 16px;
+			margin: 4px 2px;
+			cursor: $cursor;
+		}
+	}
+	&__container__list__item {
+		padding: 16px;
+		flex: 0 0 25%;
+		flex-direction: column;
+		@include display-flex;
+		p {
+			padding: 8px;
+			background: #e2d8d8;
+			font-size: 12px;
+			border-radius: 2px;
+			height: 100px;
+			overflow: hidden;
+		}
+		figure {
+			img {
+				width: $width;
+				display: block;
+				padding: 8px 0px;
+			}
+		}
+		h5 {
+			min-height: 45px;
+		}
+	}
 }
-.product__container {
-	display: flex;
-	@include max-width;
-}
-.product__container__item__col {
-	display: flex;
-    flex-wrap: wrap;
-}
+
+
 .pl__list {
 	border-bottom: $border-bottom;
 }
-.product__container__list__item {
-	padding: 16px;
-	flex: 0 0 25%;
-	flex-direction: column;
-	@include display-flex;
-	p {
-		padding: 8px;
-		background: #e2d8d8;
-		font-size: 12px;
-		border-radius: 2px;
-		height: 100px;
-		overflow: hidden;
-	}
-	figure {
-		img {
-			width: $width;
-			display: block;
-			padding: 8px 0px;
-		}
-	}
-	h5 {
-		min-height: 45px;
-	}
-}
+

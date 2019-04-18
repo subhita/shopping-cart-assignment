@@ -1,10 +1,10 @@
 <div id="myModal" class="modal" role="dialog" tabindex="-1">
-    <div class="modal-content">
-        <div class="modal-header">
+    <div class="modal__content">
+        <div class="modal__header">
             <button class="close" aria-label="close">&times;</button>
             <h2>My Cart</h2>
         </div>
-        <div class="modal-body">
+        <div class="modal__body">
             {{#if cart.items}}
             {{#each cart.items}}
             <div class="cart__content__model cart__item" data-id="{{product.id}}">
@@ -12,12 +12,12 @@
                 <div class="cart__item__content">
                     <h5>{{product.name}}</h5>
                     <div class="cart__item__content__count">
-                        <button type="button" class="cart__item__content__count__plus" aria-label="plus"
+                        <button type="button" class="cart__item__count--plus" aria-label="plus"
                             data-id="{{product.id}}">&#43;</button>
                         <span class="cart__counter" data-id="{{product.id}}">{{count}}</span>
-                        <button type="button" class="cart__item__content__count__minus" aria-label="minus"
+                        <button type="button" class="cart__item__count--minus" aria-label="minus"
                             data-id="{{product.id}}">&#45;</button>
-                        <span class="cart__item__content__count__multiply" aria-label="multiplication">&times;</span>
+                        <span class="cart__item__count__multiply" aria-label="multiplication">&times;</span>
                         <span>Rs {{product.price}}</span>
                     </div>
                 </div>
@@ -30,7 +30,7 @@
             <p>Your favourite item are just a click away</p>
             {{/if}}
         </div>
-        <div class="modal-footer">
+        <div class="modal__footer">
             {{#if cart.items}}
             <a href="/cart">
                 <h3>Proceed to checkout</h3>

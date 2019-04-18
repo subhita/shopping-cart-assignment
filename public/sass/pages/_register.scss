@@ -4,39 +4,41 @@
 	@include  flex-align-items;
 	justify-content: space-around;
 	@include max-width;
-}
-.signin__content p {
+	&__content p {
 		line-height: 60px;
-}
-.signin__form {
-	flex: 0 1 30%;
-}
-.login__form__input, .signin__form__input {
-	margin: 24px 0px;
-	position: relative;
-	input {
-		border: none;
-		border-bottom: $border-bottom;
-		padding: 8px 0px;
-		width: -webkit-fill-available;
-		&:focus {
-			outline: none;
-			border-bottom: 2px solid #4ae4ec;
+	}
+	&__form {
+		flex: 0 1 30%;
+	}
+	&__form__input {
+		margin: 24px 0px;
+		position: relative;
+		input {
+			border: none;
+			border-bottom: $border-bottom;
+			padding: 8px 0px;
+			width: -webkit-fill-available;
+			&:focus {
+				outline: none;
+				border-bottom: 2px solid #4ae4ec;
+			}
+		}
+		button {
+			background-color: $color-primary;
+			border: none;
+			color: $color-secondary;
+			padding: 12px 20px;
+			width: $width;
+			margin: 4px 2px;
+			cursor: $cursor;
+			&:focus {
+				outline: none;
+			}
 		}
 	}
-	button {
-		background-color: $color-primary;
-		border: none;
-		color: $color-secondary;
-		padding: 12px 20px;
-		width: $width;
-		margin: 4px 2px;
-		cursor: $cursor;
-		&:focus {
-			outline: none;
-		}
-	}
 }
+
+
 label {
 	top: 0px;
 	position: absolute;

@@ -4,10 +4,12 @@
 	@include  flex-align-items;
 	justify-content: space-around;
 	@include max-width;
-}
-.login__content p {
+	&__content p {
 		line-height: 60px;
+	}
+	&__form {
+		flex: 0 1 30%;
+	}
 }
-.login__form {
-	flex: 0 1 30%;
-}
+
+

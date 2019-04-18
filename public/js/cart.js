@@ -49,8 +49,8 @@ function postCartData(type, data) {
       });
     });
   })(
-    document.getElementsByClassName('cart__item__content__count__minus'),
-    document.getElementsByClassName('cart__item__content__count__plus'),
+    document.getElementsByClassName('cart__item__count--minus'),
+    document.getElementsByClassName('cart__item__count--plus'),
     document.getElementsByClassName('cart__count__item')[0],
     cartController
   );
