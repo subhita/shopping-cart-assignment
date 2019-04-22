@@ -108,26 +108,27 @@
 		position: absolute;
 		left: 80%;
 		top: 0%;
-	}
-	.header__cart__box {
-		a {
-			position: relative;
-		}
-		p {
-			position: absolute;
-			left: 65%;
-			top: 10%;
-			&:last-child {
-				display: none;
+		&__box {
+			a {
+				position: relative;
+			}
+			p {
+				position: absolute;
+				left: 65%;
+				top: 10%;
+				&:last-child {
+					display: none;
+				}
+			}
+			@include  flex-align-items;
+			justify-content: center;
+			a.icon {
+				display: block;
+				margin-top: 20px;
 			}
 		}
-		@include  flex-align-items;
-		justify-content: center;
-		a.icon {
-			display: block;
-			margin-top: 20px;
-		}
 	}
+	
 	.topnav.responsive {
 		.icon {
 			position: absolute;

@@ -46,14 +46,10 @@ label {
 	transition: 0.2s ease all;
 }
 input {
-	&:focus {
-		~ {
-			label {
+	&:focus ~ label  {
 				top: -40%;
 				color: #4ae4ec;
 				outline: none;
 				font-size: 16px;
 			}
-		}
-	}
 }
