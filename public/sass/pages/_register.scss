@@ -9,32 +9,10 @@
 	}
 	&__form {
 		flex: 0 1 30%;
+		box-sizing: border-box;
 	}
 	&__form__input {
-		margin: 24px 0px;
-		position: relative;
-		input {
-			border: none;
-			border-bottom: $border-bottom;
-			padding: 8px 0px;
-			width: -webkit-fill-available;
-			&:focus {
-				outline: none;
-				border-bottom: 2px solid #4ae4ec;
-			}
-		}
-		button {
-			background-color: $color-primary;
-			border: none;
-			color: $color-secondary;
-			padding: 12px 20px;
-			width: $width;
-			margin: 4px 2px;
-			cursor: $cursor;
-			&:focus {
-				outline: none;
-			}
-		}
+		@include form-input;
 	}
 }
 
@@ -47,9 +25,16 @@ label {
 }
 input {
 	&:focus ~ label  {
-				top: -40%;
-				color: #4ae4ec;
-				outline: none;
-				font-size: 16px;
-			}
+		top: -40%;
+		color: #4ae4ec;
+		outline: none;
+		font-size: 16px;
+	}
+}
+input {
+	&:valid ~ label  {
+		top: -40%;
+		outline: none;
+		font-size: 16px;
+	}
 }

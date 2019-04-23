@@ -1,12 +1,12 @@
 <section>
     <div class="signin">
         <div class="signin__content" tabindex="0">
-            <h2>Signup</h2>
-            <p>We do not share your personal details with anyone.</p>
+            <h2>{{registerData.Heading}}</h2>
+            <p>{{registerData.SubHeading}}</p>
         </div>
         <div class="signin__form">
             <form>
-                 {{#each registerData}}
+                 {{#each registerData.inputs}}
                 <div class="signin__form__input">
                     <input type="{{type}}" name="{{label}}" required>
                     <label>{{label}}</label>

@@ -222,9 +222,10 @@
 				color: $color-secondary;
 				font-size: 16px;
 				transform: none;
-				&::before {
-					content: " @ ";
-				}
+				
+			}
+			&span::before {
+				content: " @ ";
 			}
 		}
 	}
@@ -251,31 +252,21 @@
 			border-right: 4px solid transparent;
 			transition: border-bottom .1s, border-top .1s .1s;
 		}
-		&:hover {
-			~ {
-				label {
+		&:hover ~ label {
 					background: rgba(0,0,0,.3);
-				}
-			}
 		}
 	}
 	#check01 {
-		&:checked {
-			~ {
-				label {
-					&:after {
+		&:checked ~ lablel::after {
 						border-top: 0 solid rgba(255,255,255,255);
 						border-bottom: 4px solid rgba(255,255,255,255);
 						transition: border-top .1s, border-bottom .1s .1s;
-					}
 				}
 				ul.submenu {
 					max-height: 300px;
 					transition: max-height 0.5s ease-in;
 					
 				}
-			}
-		}
 	}
 	ul.submenu {
 		max-height: 0;

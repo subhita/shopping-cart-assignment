@@ -1,12 +1,12 @@
 <section>
     <div class="login">
         <div class="login__content">
-            <h2  tabindex="0">Login</h2>
-            <p  tabindex="0">Get access to your Orders, Wishlist and Recommendations.</p>
+            <h2  tabindex="0">{{loginData.Heading}}</h2>
+            <p  tabindex="0">{{loginData.SubHeading}}</p>
         </div>
         <div class="login__form">
             <form>
-                {{#each loginData}}
+                {{#each loginData.inputs}}
                 <div class="login__form__input">
                     <input type="{{type}}" name="{{label}}" required>
                     <label>{{label}}</label>
