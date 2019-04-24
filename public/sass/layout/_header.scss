@@ -1,6 +1,10 @@
 /* header */
-nav {
+header {
 	border-bottom: $border-bottom;
+}
+.header {
+	@include max-width;
+	position: relative;
 }
 .logo {
 	height: 78px;

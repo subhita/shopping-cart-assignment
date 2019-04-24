@@ -1,7 +1,3 @@
-.header {
-	@include max-width;
-	position: relative;
-}
 .row {
 	@include max-width;
 	@include display-flex;

@@ -65,7 +65,7 @@ router.post('/cart/:operation', function (req, res) {
   } else if (operation === 'remove') {
     count = -1;
   } else {
-    return res.status(404).send('Not Found');
+    return res.status(400).send('Not Found');
   }
   const product = products.find(val => val.id === req.body.productId);
   if (product) {
@@ -91,7 +91,7 @@ router.post('/cart/:operation', function (req, res) {
     }
     return res.send(cart);
   }
-  return res.status(404).send('Not Found');
+  return res.status(400).send('Not Found');
 });
 
 module.exports = router;
