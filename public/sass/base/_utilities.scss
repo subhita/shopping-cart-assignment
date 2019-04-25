@@ -258,7 +258,7 @@
 	}
 	#check01 {
 		&:checked ~ {
-				label &:after {
+				label:after {
 						border-top: 0 solid rgba(255,255,255,255);
 						border-bottom: 4px solid rgba(255,255,255,255);
 						transition: border-top .1s, border-bottom .1s .1s;
@@ -270,6 +270,7 @@
 				}
 		}
 	}
+	
 
 	ul.submenu {
 		max-height: 0;

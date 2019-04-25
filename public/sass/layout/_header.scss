@@ -34,7 +34,7 @@ header {
 		a {
 			@include  flex-align-items;
 			justify-content: flex-start;
-			background-color: #e2d8d8;
+			background-color: $bg-color;
 			padding: 0px 12px;
 			margin-top: 12px;
 			text-decoration: none;

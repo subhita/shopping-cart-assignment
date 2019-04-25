@@ -27,7 +27,7 @@
 		}
 	}
 	flex: 0 0 30%;
-	background-color: #e2d8d8;
+	background-color: $bg-color;
 	ul#menu {
 		input {
 			display: none;
@@ -71,7 +71,7 @@
 		@include display-flex;
 		p {
 			padding: 8px;
-			background: #e2d8d8;
+			background: $bg-color;
 			font-size: 12px;
 			border-radius: 2px;
 			height: 100px;

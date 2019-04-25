@@ -37,7 +37,7 @@
   }
   @mixin  nav-li {
       li {
-          background-color: #e2d8d8;
+          background-color: $bg-color;
           &:last-child {
               margin-left: 0px;
           }

@@ -61,9 +61,9 @@ router.post('/cart/:operation', function (req, res) {
   const operation = req.params.operation;
   let count = 0;
   if (operation === 'add') {
-    count = 1;
+    count++;
   } else if (operation === 'remove') {
-    count = -1;
+    count--;
   } else {
     return res.status(400).send('Not Found');
   }

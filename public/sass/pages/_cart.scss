@@ -1,6 +1,6 @@
 
 .cart {
-	background-color: #e2d8d8;
+	background-color: $bg-color;
 	display: flex;
 	flex-direction: column;
 	&__header {
@@ -58,7 +58,7 @@
 		border-bottom: $border-bottom;
 		padding: 10px;
 		img {
-			height: 0%;
+			height: 100%;
 			width: 18%;
 		}
 		.total__price {
@@ -72,6 +72,7 @@
 		border-radius: 10px;
 	}
 }
+
 
 
 
