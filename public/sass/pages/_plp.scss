@@ -1,81 +1,78 @@
-
 .home__row__product__box {
-	flex: 0 1 30%;
-	img {
-		width: $width;
-	}
+  flex: 0 1 30%;
+  img {
+    width: $width;
+  }
 }
 .submenu li:active {
-	background-color: $color-primary;
+  background-color: $color-primary;
 }
 
 .product__container__list {
-	ul {
-		list-style: none;
-		display: flex;
-		flex-direction: column;
-		li {
-			align-self: flex-end;
-			padding: 12px 10px;
-			border-bottom: $border-bottom;
-			width: 95%;
-			text-align: center;
-			a {
-				text-decoration: none;
-				color: $color-tertairy;
-			}
-		}
-	}
-	flex: 0 0 30%;
-	background-color: $bg-color;
-	ul#menu {
-		input {
-			display: none;
-		}
-		label {
-			display: none;
-		}
-	}
+  ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    li {
+      align-self: flex-end;
+      padding: 12px 10px;
+      border-bottom: $border-bottom;
+      width: 95%;
+      text-align: center;
+      a {
+        text-decoration: none;
+        color: $color-tertairy;
+      }
+    }
+  }
+  flex: 0 0 30%;
+  background-color: $bg-color;
+  ul#menu {
+    input {
+      display: none;
+    }
+    label {
+      display: none;
+    }
+  }
 }
 .product {
-	padding: 0px;
-	&__container {
-		display: flex;
-		@include max-width;
-	}
-	&__container__item__col {
-		display: flex;
-		flex-wrap: wrap;
-	}
-	@include product-btn;
-	&__container__list__item {
-		padding: 16px;
-		flex: 0 0 25%;
-		flex-direction: column;
-		@include display-flex;
-		p {
-			padding: 8px;
-			background: $bg-color;
-			font-size: 12px;
-			border-radius: 2px;
-			height: 100px;
-			overflow: hidden;
-		}
-		figure {
-			img {
-				width: $width;
-				display: block;
-				padding: 8px 0px;
-			}
-		}
-		h5 {
-			min-height: 45px;
-		}
-	}
+  padding: 0px;
+  &__container {
+    display: flex;
+    @include max-width;
+  }
+  &__container__item__col {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  @include product-btn;
+  &__container__list__item {
+    padding: 16px;
+    flex: 0 0 25%;
+    flex-direction: column;
+    @include display-flex;
+    p {
+      padding: 8px;
+      background: $bg-color;
+      font-size: 12px;
+      border-radius: 2px;
+      height: 100px;
+      overflow: hidden;
+    }
+    figure {
+      img {
+        width: $width;
+        display: block;
+        padding: 8px 0px;
+      }
+    }
+    h5 {
+      min-height: 45px;
+    }
+  }
 }
-
 
 .pl__list {
-	border-bottom: $border-bottom;
+  border-bottom: $border-bottom;
 }
-

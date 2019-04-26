@@ -1,63 +1,63 @@
 /* header */
 header {
-	border-bottom: $border-bottom;
+  border-bottom: $border-bottom;
 }
 .header {
-	@include max-width;
-	position: relative;
+  @include max-width;
+  position: relative;
 }
 .logo {
-	height: 78px;
-	padding: 3px;
+  height: 78px;
+  padding: 3px;
 }
 .home__slider__banners {
-	text-align: center;
+  text-align: center;
 }
 .header__list__left {
-	@include position($float-left);
-	left: 24%;
-	top: 48%;
-	@include li-last-child;
+  @include position($float-left);
+  left: 24%;
+  top: 48%;
+  @include li-last-child;
 }
 .header__list__right {
-	@include position($float-right);
-	left: 88%;
-	top: 4%;
-	display: flex;
-	@include li-last-child;
+  @include position($float-right);
+  left: 88%;
+  top: 4%;
+  display: flex;
+  @include li-last-child;
 }
 .header__cart {
-	@include position($float-left);
-	left: 88%;
-	top: 28%;
-	&__box {
-		a {
-			@include  flex-align-items;
-			justify-content: flex-start;
-			background-color: $bg-color;
-			padding: 0px 12px;
-			margin-top: 12px;
-			text-decoration: none;
-			color: black;
-		}
-		
-		.icon {
-			display: none;
-			color: $color-secondary;
-			text-decoration: none;
-		}
-	}
-	&__img {
-		height: 32px;
-		width: auto;
-		margin-top: 16px;
-	}
+  @include position($float-left);
+  left: 88%;
+  top: 28%;
+  &__box {
+    a {
+      @include flex-align-items;
+      justify-content: flex-start;
+      background-color: $bg-color;
+      padding: 0px 12px;
+      margin-top: 12px;
+      text-decoration: none;
+      color: black;
+    }
+
+    .icon {
+      display: none;
+      color: $color-secondary;
+      text-decoration: none;
+    }
+  }
+  &__img {
+    height: 32px;
+    width: auto;
+    margin-top: 16px;
+  }
 }
 
 li a {
-		text-decoration: none;
+  text-decoration: none;
 }
 
 .icon .fa {
-	color: $color-primary;
+  color: $color-primary;
 }
