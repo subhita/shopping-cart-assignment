@@ -23,6 +23,12 @@
       @include product-btn;
     }
   }
+  &__row__product__box {
+    flex: 0 1 30%;
+    img {
+      width: $width;
+    }
+  }
   &:nth-child(even) {
     .home__row {
       flex-direction: row-reverse;

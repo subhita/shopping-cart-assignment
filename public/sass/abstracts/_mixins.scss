@@ -47,12 +47,6 @@
   width: 50%;
   float: $float;
 }
-@mixin text {
-  color: #f2f2f2;
-  font-size: 15px;
-  padding: 8px 12px;
-  position: absolute;
-}
 @mixin prev-next {
   cursor: pointer;
   position: absolute;
@@ -117,5 +111,15 @@
       margin: 4px 2px;
       cursor: $cursor;
     }
+  }
+}
+
+@mixin  form-input {
+  &__content p {
+    line-height: 60px;
+  }
+  &__form {
+    flex: 0 1 30%;
+    box-sizing: border-box;
   }
 }

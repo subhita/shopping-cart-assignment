@@ -15,8 +15,8 @@ const cartController = (function() {
       count = count || 0;
       if (count > 0) {
         document.querySelectorAll(
-          'span[data-id="' + itemId + '"]'
-        )[0].innerHTML = count;
+          'input[data-id="' + itemId + '"]'
+        )[0].value = count;
         document.querySelectorAll(
           'div[class="total__price"][data-id="' + itemId + '"]'
         )[0].innerHTML = "Rs." + price * count;
@@ -34,16 +34,23 @@ const cartController = (function() {
   };
 })();
 
-(function(removeItemElems, addItemElems, cartCountElem, cartController) {
+(function(removeItemElems, addItemElems, changeItem, cartCountElem, cartController) {
   [
     { elems: removeItemElems, type: "remove" },
-    { elems: addItemElems, type: "add" }
+    { elems: addItemElems, type: "add" },
+    { elems: changeItem, type: "change" }
   ].forEach(function(elemsOperation) {
     [].forEach.call(elemsOperation.elems, element => {
-      element.addEventListener("click", event => {
+      if(elemsOperation.type === "change" ) {
+          var ev = "change"
+      }else{
+        var ev = "click"
+      }
+
+      element.addEventListener(ev, event => {
         event.preventDefault();
         let productId = event.target.getAttribute("data-id");
-        postCartData(elemsOperation.type, { productId: productId }).then(
+        postCartData(elemsOperation.type, { productId: productId, inputVal: event.target.value  }).then(
           function(cart) {
             cartCountElem.innerHTML = cart.count;
             let cartProductDetail = cart.items.find(
@@ -64,6 +71,7 @@ const cartController = (function() {
 })(
   document.getElementsByClassName("cart__item__count--minus"),
   document.getElementsByClassName("cart__item__count--plus"),
+  document.getElementsByClassName("cart__counter"),
   document.getElementsByClassName("cart__count__item")[0],
   cartController
 );

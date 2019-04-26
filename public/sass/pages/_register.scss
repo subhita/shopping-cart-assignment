@@ -2,13 +2,7 @@
   @include flex-align-items;
   justify-content: space-around;
   @include max-width;
-  &__content p {
-    line-height: 60px;
-  }
-  &__form {
-    flex: 0 1 30%;
-    box-sizing: border-box;
-  }
+  @include form-input;
   &__form__input {
     @include form-input;
   }
@@ -27,8 +21,6 @@ input {
     outline: none;
     font-size: 16px;
   }
-}
-input {
   &:valid ~ label {
     top: -40%;
     outline: none;

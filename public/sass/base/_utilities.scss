@@ -1,25 +1,26 @@
 /* Media Queries */
 
 @media only screen and (max-width: 300px) {
-  .home__slider__prev {
-    font-size: 11px;
-  }
-  .home__slider__next {
-    font-size: 11px;
-  }
-  .text {
-    font-size: 11px;
+  .home__slider {
+    &__prev {
+      font-size: 11px;
+    }
+    &__next {
+      font-size: 11px;
+    }
   }
 }
 @media screen and (max-width: 768px) {
-  .header__list__right {
-    left: 76%;
-  }
-  .header__cart {
-    left: 76%;
-  }
-  .header__list__left {
-    left: 34%;
+  .header {
+    &__cart {
+      left: 76%;
+    }
+    &__list__left {
+      left: 34%;
+    }
+    &__list__right {
+      left: 76%;
+    }
   }
   .home__row {
     max-width: 750px;
@@ -45,15 +46,13 @@
       }
     }
   }
-  .product__container__list__item {
-    flex: 0 0 50%;
-  }
   .pl__list {
     figure {
       @include p-width($float-left);
     }
   }
   .product__container__list__item {
+    flex: 0 0 50%;
     p {
       @include p-width($float-right);
       min-height: 155px;
@@ -74,12 +73,12 @@
       padding: 0px 4px;
     }
   }
-  .product__container__list__item {
-    flex: 0 0 100%;
-  }
   .product__container__item {
     flex: 100%;
     max-width: 100%;
+    &&__item {
+      flex: 0 0 100%;
+    }
   }
   .logo {
     height: 55px;
@@ -87,6 +86,8 @@
   .header__list__left {
     @include nav-li;
     .header__list__right {
+      @include nav-li;
+      @include main-nav-li;
       .responsive {
         position: relative;
         a {
@@ -96,10 +97,6 @@
         }
       }
     }
-    @include main-nav-li;
-  }
-  .header__list__right {
-    @include nav-li;
     @include main-nav-li;
   }
   .header__cart {
@@ -171,11 +168,19 @@
   .product__container {
     max-width: 480px;
     flex-direction: column;
+    &__item {
+      flex-wrap: nowrap;
+      flex-direction: column;
+    }
+    &__list__item {
+      p {
+        font-size: 14px;
+        min-height: 180px;
+        line-height: 24px;
+      }
+    }
   }
-  .product__container__item {
-    flex-wrap: nowrap;
-    flex-direction: column;
-  }
+
   .product__container__list {
     height: auto;
     ul#menu {
@@ -200,13 +205,7 @@
       }
     }
   }
-  .product__container__list__item {
-    p {
-      font-size: 14px;
-      min-height: 180px;
-      line-height: 24px;
-    }
-  }
+
   .item__price {
     text-align: center;
     span {

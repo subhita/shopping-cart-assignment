@@ -5,6 +5,19 @@ header {
 .header {
   @include max-width;
   position: relative;
+  &__list__left {
+    @include position($float-left);
+    left: 24%;
+    top: 48%;
+    @include li-last-child;
+  }
+  &__list__right {
+    @include position($float-right);
+    left: 88%;
+    top: 4%;
+    display: flex;
+    @include li-last-child;
+  }
 }
 .logo {
   height: 78px;
@@ -13,19 +26,7 @@ header {
 .home__slider__banners {
   text-align: center;
 }
-.header__list__left {
-  @include position($float-left);
-  left: 24%;
-  top: 48%;
-  @include li-last-child;
-}
-.header__list__right {
-  @include position($float-right);
-  left: 88%;
-  top: 4%;
-  display: flex;
-  @include li-last-child;
-}
+
 .header__cart {
   @include position($float-left);
   left: 88%;
