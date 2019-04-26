@@ -1,12 +1,5 @@
-.row {
-	@include max-width;
-	@include display-flex;
-	align-items: center;
-	flex-direction: row;
-}
 
-
- .home__section {
+ .home {
 	padding: 40px 0;
 	&:after {
 		content: '';
@@ -22,9 +15,17 @@
 		transform: translate(-50%);
 		margin-top: 19px;
 	}
-	
+	&__row {
+		@include max-width;
+		@include display-flex;
+		align-items: center;
+		flex-direction: row;
+		&__product {
+			@include product-btn;
+		}
+	}
 	&:nth-child(even) {
-		.row {
+		.home__row {
 			flex-direction: row-reverse;
 		}
 	}

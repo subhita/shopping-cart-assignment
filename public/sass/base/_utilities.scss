@@ -1,10 +1,10 @@
 /* Media Queries */
 
 @media only screen and (max-width: 300px) {
-	.prev {
+	.home__slider__prev {
 		font-size: 11px;
 	}
-	.next {
+	.home__slider__next {
 		font-size: 11px;
 	}
 	.text {
@@ -21,10 +21,10 @@
 	.header__list__left {
 		left: 34%;
 	}
-	.row {
+	.home__row {
 		max-width: 750px;
 	}
-	.product__content {
+	.home__row__product__content {
 		p {
 			line-height: 24px;
 		}
@@ -67,7 +67,7 @@
 	.cart__item__content {
 		flex: 1 1 30%;
 	}
-	.product__content {
+	.home__row__product__content {
 		p {
 			line-height: 24px;
 			font-size: 12px;

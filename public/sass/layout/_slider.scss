@@ -1,61 +1,50 @@
 /* image slider */
-.slideshow-container {
+
+.home__slider {
 	img {
 		margin-left: auto;
 		margin-right: auto;
 		display: block;
 	}
+	&__dot {
+		cursor: $cursor;
+		height: 8px;
+		width: 8px;
+		margin: 0 2px;
+		background-color: #bbb;
+		border-radius: 50%;
+		display: inline-block;
+		transition: background-color 0.6s ease;
+		&:hover {
+			background-color: #717171;
+		}
+	}
+	&__prev {
+		@include prev-next;
+	}
+	&__next {
+		@include prev-next;
+		right: 0;
+	}
 	position: relative;
 	@include max-width;
 }
-.prev {
-	@include prev-next;
-}
-.next {
-	@include prev-next;
-	right: 0;
-}
-.mySlides {
-	&:hover {
-		~ {
-			.prev {
-				background-color: rgba(0,0,0,0.8);
-				color: $color-secondary;
-			}
-			.next {
-				background-color: rgba(0,0,0,0.8);
-				color: $color-secondary;
-			}
-		}
-	}
-}
-.text {
-	@include text;
-	bottom: 8px;
-	width: $width;
-	text-align: center;
-}
-.numbertext {
-	@include text;
-	top: 0;
-}
-.dot {
-	cursor: $cursor;
-	height: 8px;
-	width: 8px;
-	margin: 0 2px;
-	background-color: #bbb;
-	border-radius: 50%;
-	display: inline-block;
-	transition: background-color 0.6s ease;
-	&:hover {
-		background-color: #717171;
-	}
-}
 
-.fade {
+.home__slider__main--fade {
 	-webkit-animation-name: fade;
 	-webkit-animation-duration: 1.5s;
 	animation-name: fade;
 	animation-duration: 1.5s;
+	&:hover ~ {
+		.home__slider__prev {
+			background-color: rgba(0,0,0,0.8);
+			color: $color-secondary;
+		}
+		.home__slider__next {
+			background-color: rgba(0,0,0,0.8);
+			color: $color-secondary;
+		}
+	}
+		
+	
 }

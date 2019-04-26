@@ -17,6 +17,6 @@
       });
     });
   })(
-    document.getElementsByClassName('plp-cart-buy__btn'),
+    document.getElementsByClassName('item__price'),
     document.getElementsByClassName('cart__count__item')[0]
   );

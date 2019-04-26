@@ -1,30 +1,27 @@
 
-    <section class="home__section" tabindex="0">
-        <div class="slideshow-container">
-            <div class="mySlides fade" id="slider">
+    <section class="home" tabindex="0">
+        <div class="home__slider">
+            <div class="home__slider__main--fade" id="slider">
             {{#each banners}}
-                        <img src="{{this.bannerImageUrl}}" alt="{{this.bannerImageAlt}}" class="sale" style="width:100%">
+                        <img src="{{this.bannerImageUrl}}" alt="{{this.bannerImageAlt}}" class="home__slider__main__img" style="width:100%">
                     {{/each}}
             </div>
-            <a class="prev" role="button" title="previous" onclick="plusSlides(-1)">&#10094;</a>
-            <a class="next" role="button" title="next" onclick="plusSlides(1)">&#10095;</a>
-            <div class="banners">
+            <a class="home__slider__prev" role="button" title="previous" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="home__slider__next" role="button" title="next" onclick="plusSlides(1)">&#10095;</a>
+            <div class="home__slider__banners">
                  {{#each banners}}
-                  <span class="dot" onclick="currentDiv({{math @index "+" 1}})"></span>
+                  <span class="home__slider__dot" onclick="currentDiv({{math @index "+" 1}})"></span>
                  {{/each}}
             </div>
         </div>
     </section>
-    <div id="category__id">
      {{#each categories}}
-        <section class="home__section" >
-            <div class="row">
-                <div class="product__box">
-                    <figure>
-                        <img src="{{this.imageUrl}}" alt="{{this.name}}" class="product__items" tabindex="0">
-                    </figure>
+        <section class="home">
+            <div class="home__row">
+                <div class="home__row__product__box">
+                        <img src="{{this.imageUrl}}" alt="{{this.name}}" class="home__row__product__item" tabindex="0">
                 </div>
-                <div class="product__content" >
+                <div class="home__row__product__content" >
                     <h2 tabindex="0">{{this.name}}</h2>
                     <p tabindex="0">{{this.description}}</p>
                     <button>Explore {{this.key}}</button>
@@ -33,7 +30,6 @@
         </section>
         
     {{/each}}
-    </div>
 
 
 
@@ -49,8 +45,8 @@
     }
     function showDivs(n) {
         var i;
-        var x = document.getElementsByClassName("sale");
-        var dots = document.getElementsByClassName("dot");
+        var x = document.getElementsByClassName("home__slider__main__img");
+        var dots = document.getElementsByClassName("home__slider__dot");
         if (n > x.length) {slideIndex = 1}
         if (n < 1) {slideIndex = x.length}
         for (i = 0; i < x.length; i++) {

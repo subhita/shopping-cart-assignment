@@ -1,5 +1,5 @@
 
-.product__box {
+.home__row__product__box {
 	flex: 0 1 30%;
 	img {
 		width: $width;
@@ -47,23 +47,7 @@
 		display: flex;
 		flex-wrap: wrap;
 	}
-	&__content {
-		text-align: center;
-		flex: 1;
-		p {
-			line-height: 60px;
-			font-size: 16px;
-		}
-		button {
-			background-color: $color-primary;
-			border: none;
-			color: $color-secondary;
-			padding: 12px 20px;
-			font-size: 16px;
-			margin: 4px 2px;
-			cursor: $cursor;
-		}
-	}
+	@include product-btn;
 	&__container__list__item {
 		padding: 16px;
 		flex: 0 0 25%;

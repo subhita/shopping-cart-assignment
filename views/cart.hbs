@@ -9,8 +9,9 @@
             <div class="cart__item__content">
                 <h3>{{product.name}}</h3>
                 <div class="cart__item__content__count">
-                    <button type="button" class="cart__item__count--plus" aria-label="plus" data-id="{{product.id}}">&#43;</button>
-                    <span class="cart__counter" data-id="{{product.id}}">{{count}}</span>
+                    <button type="button" class="cart__item__count--plus" aria-label="plus"
+                        data-id="{{product.id}}">&#43;</button>
+                    <input class="cart__counter" data-id="{{product.id}}" value="{{count}}">
                     <button type="button" class="cart__item__count--minus" aria-label="minus"
                         data-id="{{product.id}}">&#45;</button>
                     <span class="cart__item__content__count__multiply" aria-label="multiplication">&times;</span>
@@ -40,7 +41,7 @@
     <a href="/products" class="btn checkout__btn">
         <span>Start Shopping</span>
     </a>
-     {{/if}}
+    {{/if}}
 </div>
 
 <script src="js/cart.js" type="text/javascript"></script>
