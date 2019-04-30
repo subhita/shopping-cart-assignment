@@ -28,18 +28,18 @@ window.slider = function(prev, next, dots, slides, dotsDom) {
       slides[i].style.display = "none";
       dots[i].className = dots[i].className.replace(" active", "");
     }
-    slides[slideIndex - 1].style.display = "block";
-    dots[slideIndex - 1].className += " active";
+    slides[Number(slideIndex) - 1].style.display = "block";
+    dots[Number(slideIndex) - 1].className += " active";
   };
 
   showSlides(slideIndex);
 
   prev.addEventListener("click", () => {
-    showSlides((slideIndex += -1));
+    showSlides(slideIndex = (Number(slideIndex) -1));
   });
 
   next.addEventListener("click", () => {
-    showSlides((slideIndex += -1));
+    showSlides((slideIndex = (Number(slideIndex) +1)));
   });
 };
 

@@ -24,12 +24,13 @@
   }
   .home__row {
     max-width: 750px;
-  }
-  .home__row__product__content {
-    p {
-      line-height: 24px;
+    &__product__content {
+      p {
+        line-height: 24px;
+      }
     }
   }
+
   .item__price {
     .btn {
       width: $width;
