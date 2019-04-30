@@ -91,11 +91,11 @@
       @include main-nav-li;
       .responsive {
         position: relative;
-        a {
-          float: none;
-          display: block;
-          text-align: left;
-        }
+      }
+      .responsive a {
+        float: none;
+        display: block;
+        text-align: left;
       }
     }
     @include main-nav-li;
@@ -114,9 +114,9 @@
         position: absolute;
         left: 65%;
         top: 10%;
-        &:last-child {
-          display: none;
-        }
+      }
+      p:last-child {
+        display: none;
       }
       @include flex-align-items;
       justify-content: center;
