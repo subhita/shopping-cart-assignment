@@ -34,7 +34,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 hbs.registerPartials(path.join(__dirname, 'views/partials'));
 
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
