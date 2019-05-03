@@ -1,21 +1,19 @@
-<section>
-    <div class="login">
-        <div class="login__content">
-            <h2 tabindex="0">{{loginData.Heading}}</h2>
-            <p tabindex="0">{{loginData.SubHeading}}</p>
-        </div>
-        <div class="login__form">
-            <form>
-                {{#each loginData.inputs}}
-                <div class="login__form__input">
-                    <input type="{{type}}" name="{{label}}" autocomplete="off" id="{{label}}" required>
-                    <label for="{{label}}">{{label}}</label>
-                </div>
-                {{/each}}
-                <div class="login__form__input">
-                    <button type="submit">Login</button>
-                </div>
-            </form>
-        </div>
+<section class="login">
+    <div class="login__content">
+        <h2 tabindex="0">{{loginData.Heading}}</h2>
+        <p tabindex="0">{{loginData.SubHeading}}</p>
+    </div>
+    <div class="login__form">
+        <form action="/" method="POST">
+            {{#each loginData.inputs}}
+            <div class="login__form__input">
+                <input type="{{type}}" name="{{label}}" autocomplete="off" id="{{label}}" required>
+                <label for="{{label}}">{{label}}</label>
+            </div>
+            {{/each}}
+            <div class="login__form__input">
+                <button type="submit">Login</button>
+            </div>
+        </form>
     </div>
 </section>

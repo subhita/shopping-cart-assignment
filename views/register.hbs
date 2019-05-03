@@ -1,21 +1,19 @@
-<section>
-    <div class="signin">
-        <div class="signin__content" tabindex="0">
-            <h2>{{registerData.Heading}}</h2>
-            <p>{{registerData.SubHeading}}</p>
-        </div>
-        <div class="signin__form">
-            <form>
-                {{#each registerData.inputs}}
-                <div class="signin__form__input">
-                    <input type="{{type}}" name="{{label}}" autocomplete="off" id="{{label}}" required>
-                    <label for="{{label}}">{{label}}</label>
-                </div>
-                {{/each}}
-                <div class="signin__form__input">
-                    <button>Signup</button>
-                </div>
-            </form>
-        </div>
+<section class="signin">
+    <div class="signin__content" tabindex="0">
+        <h2>{{registerData.Heading}}</h2>
+        <p>{{registerData.SubHeading}}</p>
+    </div>
+    <div class="signin__form">
+        <form action="/login" method="POST">
+            {{#each registerData.inputs}}
+            <div class="signin__form__input">
+                <input type="{{type}}" name="{{label}}" autocomplete="off" id="{{label}}" required>
+                <label for="{{label}}">{{label}}</label>
+            </div>
+            {{/each}}
+            <div class="signin__form__input">
+                <button type="submit">Signup</button>
+            </div>
+        </form>
     </div>
 </section>

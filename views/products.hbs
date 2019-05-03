@@ -19,13 +19,11 @@
                 <div class="product__container__list__item">
                     <h5 tabindex="0">{{ this.name }}</h5>
                     <div class="pl__list">
-                        <figure>
-                            <img src="{{this.imageURL}}" alt="{{this.description}}" class="pl__list__item" tabindex="0">
-                        </figure>
+                        <img src="{{this.imageURL}}" alt="{{this.description}}" class="pl__list__item" tabindex="0">
                         <p tabindex="0">{{this.description}}</p>
                         <div class="item__price">
-                            <a href="" class="btn plp-cart-buy__btn" role="button" id={{this.id}}>Buy Now<span>MRP
-                                    Rs{{this.price}}</span></a>
+                            <button class="btn plp-cart-buy__btn" role="button" id={{this.id}}>Buy Now<span>MRP
+                                    Rs{{this.price}}</span></button>
                         </div>
                     </div>
                 </div>

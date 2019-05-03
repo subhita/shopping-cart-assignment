@@ -6,11 +6,11 @@
                 style="width:100%">
             {{/each}}
         </div>
-        <a class="home__slider__prev" role="button" title="previous">&#10094;</a>
-        <a class="home__slider__next" role="button" title="next" >&#10095;</a>
+        <button class="home__slider__prev"  title="previous" tabindex="0">&#10094;</button>
+        <button class="home__slider__next" title="next" tabindex="0">&#10095;</button>
         <div class="home__slider__banners">
             {{#each banners}}
-            <span class="home__slider__dot" id="{{order}}" ></span>
+            <span class="home__slider__dot" id="{{order}}"></span>
             {{/each}}
         </div>
     </div>

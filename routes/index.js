@@ -12,7 +12,7 @@ const cart = {
   totalPrice: 0
 };
 /* GET home page route. */
-router.get("/", function(req, res, next) {
+router.all("/", function(req, res, next) {
   ActiveBanners = banners.filter(banner => banner.isActive);
   ActiveCategories = prodCategories.filter(category => category.enabled);
   res.render("home", {
@@ -49,12 +49,12 @@ router.get("/products/:id", function(req, res, next) {
 });
 
 /* GET login page route. */
-router.get("/login", function(req, res, next) {
+router.all("/login", function(req, res, next) {
   res.render("login", { cart, loginData });
 });
 
 /* GET register page route. */
-router.get("/register", function(req, res, next) {
+router.all("/register", function(req, res, next) {
   res.render("register", { cart, registerData });
 });
 

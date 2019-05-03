@@ -2,6 +2,8 @@
   background-color: $bg-color;
   display: flex;
   flex-direction: column;
+  @include max-width;
+  padding: 20px;
   &__header {
     @include position-bg;
     margin-top: 24px;
@@ -24,9 +26,10 @@
   }
   &__counter {
     border: none;
-    max-width: 2%;
-    margin: 0 14px;
+    max-width: 15%;
+    // margin: 0 14px;
     background: none;
+    text-align: center;
   }
   &__content__price {
     @include position-bg;
@@ -39,6 +42,7 @@
   &__checkout__btn {
     left: 0;
     width: $width;
+    @include max-width;
     @include position-bg;
     color: $color-secondary;
     text-align: center;
@@ -102,7 +106,6 @@
     border: none;
     color: $color-secondary;
     padding: 10px 12px;
-    font-size: 16px;
     cursor: $cursor;
     display: inline-block;
     text-decoration: none;
@@ -210,3 +213,4 @@
   max-height: 140px;
   padding: 0px 20px;
 }
+
