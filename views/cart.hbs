@@ -1,0 +1,47 @@
+<section>
+    <div class="cart">
+        <div class="cart__header">
+            <h2>My Cart</h2><span class="cart__header__text">({{cart.count}} items)</span>
+        </div>
+        {{#each cart.items}}
+        <div class="cart__item" data-id="{{product.id}}">
+            <img src="{{product.imageURL}}" alt="{{product.name}}" class="items product__img">
+            <div class="cart__item__content">
+                <h3>{{product.name}}</h3>
+                <div class="cart__item__content__count">
+                    <button type="button" class="cart__item__count--plus" aria-label="plus"
+                        data-id="{{product.id}}">&#43;</button>
+                    <input type="number" class="cart__counter" data-id="{{product.id}}" value="{{count}}">
+                    <button type="button" class="cart__item__count--minus" aria-label="minus"
+                        data-id="{{product.id}}">&#45;</button>
+                    <span class="cart__item__content__count__multiply" aria-label="multiplication">&times;</span>
+                    <span>Rs {{product.price}}</span>
+                </div>
+            </div>
+            <div class="total__price" aria-label="total price" data-id="{{product.id}}">Rs
+                {{math product.price "*" count}} </div>
+        </div>
+        {{/each}}
+        <div class="cart__content__price">
+            <img src="/static/images/lowest-price.png" alt="lowest price" class="lowest__price">
+            <span>You won't find it cheaper anywhere.</span>
+        </div>
+
+    </div>
+
+</section>
+<div class="cart__checkout__btn">
+    {{#if cart.items}}
+    <p>Promto code can be applied on payment page.</p>
+    <a href="#" class="btn checkout__btn">
+        <span>Proceed to checkout</span>
+        <span class="button__price">Rs. {{cart.totalPrice}}</span>
+    </a>
+    {{else}}
+    <a href="/products" class="btn checkout__btn">
+        <span>Start Shopping</span>
+    </a>
+    {{/if}}
+</div>
+
+<script src="js/cart.js" type="text/javascript"></script>

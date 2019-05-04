@@ -1,0 +1,64 @@
+/* header */
+header {
+  border-bottom: $border-bottom;
+}
+.header {
+  @include max-width;
+  position: relative;
+  &__list__left {
+    @include position($float-left);
+    left: 24%;
+    top: 48%;
+    @include li-last-child;
+  }
+  &__list__right {
+    @include position($float-right);
+    left: 88%;
+    top: 4%;
+    display: flex;
+    @include li-last-child;
+  }
+}
+.logo {
+  height: 78px;
+  padding: 3px;
+}
+.home__slider__banners {
+  text-align: center;
+}
+
+.header__cart {
+  @include position($float-left);
+  left: 88%;
+  top: 28%;
+  &__box {
+    a {
+      @include flex-align-items;
+      justify-content: flex-start;
+      background-color: $bg-color;
+      padding: 0px 12px;
+      margin-top: 12px;
+      text-decoration: none;
+      color: $color-tertairy;
+    }
+
+    .icon {
+      display: none;
+      color: $color-secondary;
+      text-decoration: none;
+    }
+  }
+  &__img {
+    height: 32px;
+    width: auto;
+    margin-top: 16px;
+  }
+}
+
+li a {
+  text-decoration: none;
+}
+
+.icon .fa {
+  color: $color-primary;
+}

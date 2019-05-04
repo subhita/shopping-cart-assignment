@@ -1,0 +1,34 @@
+<section class="home" tabindex="0">
+    <div class="home__slider">
+        <div class="home__slider__main--fade" id="slider">
+            {{#each banners}}
+            <img src="{{this.bannerImageUrl}}" alt="{{this.bannerImageAlt}}" class="home__slider__main__img"
+                style="width:100%">
+            {{/each}}
+        </div>
+        <button class="home__slider__prev"  title="previous" tabindex="0">&#10094;</button>
+        <button class="home__slider__next" title="next" tabindex="0">&#10095;</button>
+        <div class="home__slider__banners">
+            {{#each banners}}
+            <span class="home__slider__dot" id="{{order}}"></span>
+            {{/each}}
+        </div>
+    </div>
+</section>
+{{#each categories}}
+<section class="home">
+    <div class="home__row">
+        <div class="home__row__product__box">
+            <img src="{{this.imageUrl}}" alt="{{this.name}}" class="home__row__product__item" tabindex="0">
+        </div>
+        <div class="home__row__product__content">
+            <h2 tabindex="0">{{this.name}}</h2>
+            <p tabindex="0">{{this.description}}</p>
+            <button>Explore {{this.key}}</button>
+        </div>
+    </div>
+</section>
+
+{{/each}}
+
+<script src="js/slider.js" type="text/javascript"></script>

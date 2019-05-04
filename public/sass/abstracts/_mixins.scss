@@ -1,0 +1,123 @@
+/* mixins */
+
+@mixin max-width {
+  max-width: 1140px;
+  margin: 0 auto 0 auto;
+}
+
+@mixin display-flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+@mixin li-last-child {
+  display: flex;
+  list-style: none;
+  li {
+    &:last-child {
+      margin-left: 32px;
+    }
+  }
+}
+
+@mixin position($float) {
+  float: $float;
+  position: absolute;
+}
+@mixin flex-align-items {
+  display: flex;
+  align-items: center;
+}
+
+@mixin main-nav-li {
+  float: none;
+  position: inherit;
+  display: inline;
+  list-style: none;
+}
+@mixin nav-li {
+  li {
+    background-color: $bg-color;
+    &:last-child {
+      margin-left: 0px;
+    }
+  }
+}
+@mixin p-width($float) {
+  width: 50%;
+  float: $float;
+}
+@mixin prev-next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: $color-secondary;
+  font-weight: bold;
+  font-size: 18px;
+  background-color: rgba(0, 0, 0, 0.4);
+  border: none;
+}
+
+@mixin position-bg {
+  background: $color-secondary;
+}
+
+@mixin form-input {
+  margin: 24px 0px;
+  position: relative;
+  input {
+    border: none;
+    border-bottom: $border-bottom;
+    padding: 8px 0px;
+    width: -webkit-fill-available;
+    &:focus {
+      outline: none;
+      border-bottom: 2px solid #4ae4ec;
+    }
+  }
+  button {
+    background-color: $color-primary;
+    border: none;
+    color: $color-secondary;
+    padding: 12px 20px;
+    width: $width;
+    margin: 4px 2px;
+    cursor: $cursor;
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+@mixin product-btn {
+  &__content {
+    text-align: center;
+    flex: 1;
+    p {
+      line-height: 60px;
+      font-size: 16px;
+    }
+    button {
+      background-color: $color-primary;
+      border: none;
+      color: $color-secondary;
+      padding: 12px 20px;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: $cursor;
+    }
+  }
+}
+
+@mixin  form-input-main {
+  &__content p {
+    line-height: 60px;
+  }
+  &__form {
+    flex: 0 1 30%;
+    box-sizing: border-box;
+  }
+}

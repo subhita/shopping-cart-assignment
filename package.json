@@ -1,15 +1,31 @@
 {
-  "name": "code-exercise",
+  "name": "sabka-bazaar",
   "version": "1.0.0",
-  "description": "This is a shopping cart coding exercise",
+  "description": "sabka bazaar",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "canned -p 5000 ./server"
+    "compile:sass-dev":"node-sass -rw public/sass/ -o public/css/ -w",
+    "start": "node ./bin/www"
   },
-  "author": "",
-  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/subhita/SABKA-BAZAAR.git"
+  },
+  "author": "subhita",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/subhita/SABKA-BAZAAR/issues"
+  },
+  "homepage": "https://github.com/subhita/SABKA-BAZAAR#readme",
   "dependencies": {
-    "canned": "^0.3.12"
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.9",
+    "express": "~4.16.0",
+    "hbs": "~4.0.1",
+    "http-errors": "~1.6.2",
+    "morgan": "~1.9.0"
+  },
+  "devDependencies": {
+    "node-sass": "^4.11.0"
   }
 }

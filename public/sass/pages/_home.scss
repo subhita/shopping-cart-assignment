@@ -1,0 +1,37 @@
+.home {
+  padding: 40px 0;
+  &:after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    height: 3px;
+    width: 60%;
+    background: $color-secondary;
+    border-radius: 30%;
+    box-shadow: 0 10px 17px #000000d9;
+    -moz-box-shadow: 0 10px 17px #000000d9;
+    z-index: -1;
+    transform: translate(-50%);
+    margin-top: 19px;
+  }
+  &__row {
+    @include max-width;
+    @include display-flex;
+    align-items: center;
+    flex-direction: row;
+    &__product {
+      @include product-btn;
+    }
+  }
+  &__row__product__box {
+    flex: 0 1 30%;
+    img {
+      width: $width;
+    }
+  }
+  &:nth-child(even) {
+    .home__row {
+      flex-direction: row-reverse;
+    }
+  }
+}

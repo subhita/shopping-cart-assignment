@@ -1,0 +1,48 @@
+<div id="myModal" class="modal" role="dialog" tabindex="-1">
+    <div class="modal__content">
+        <div class="modal__header">
+            <button class="close" aria-label="close">&times;</button>
+            <h2>My Cart</h2>
+        </div>
+        <div class="modal__body">
+            {{#if cart.items}}
+            {{#each cart.items}}
+            <div class="cart__item" data-id="{{product.id}}">
+                <div class="cart__content__model">
+                    <img src="{{product.imageURL}}" alt="{{product.name}}" class="items">
+                    <div class="cart__item__content">
+                        <h5>{{product.name}}</h5>
+                        <div class="cart__item__content__count">
+                            <button type="button" class="cart__item__count--plus" aria-label="plus"
+                                data-id="{{product.id}}">&#43;</button>
+                            <input type="number" class="cart__counter" data-id="{{product.id}}" value="{{count}}">
+                            <button type="button" class="cart__item__count--minus" aria-label="minus"
+                                data-id="{{product.id}}">&#45;</button>
+                            <span class="cart__item__count__multiply" aria-label="multiplication">&times;</span>
+                            <span>Rs {{product.price}}</span>
+                        </div>
+                    </div>
+                    <div class="total__price" aria-label="total price" data-id="{{product.id}}">Rs
+                        {{math product.price "*" count}} </div>
+                </div>
+            </div>
+            {{/each}}
+            {{else}}
+            <h3>No item in your Cart</h3>
+            <p>Your favourite item are just a click away</p>
+            {{/if}}
+        </div>
+        <div class="modal__footer">
+            {{#if cart.items}}
+            <a href="/cart">
+                <h3>Proceed to checkout</h3>
+                {{else}}
+                <a href="/products">
+                    <h3>Start Shopping</h3>
+                    {{/if}}
+        </div>
+    </div>
+</div>
+
+
+<script type="text/javascript" src="js/cart.js"></script>

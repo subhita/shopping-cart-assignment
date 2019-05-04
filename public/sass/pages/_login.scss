@@ -1,0 +1,9 @@
+.login {
+  @include flex-align-items;
+  justify-content: space-around;
+  @include max-width;
+  @include form-input-main;
+  &__form__input {
+    @include form-input;
+  }
+}

@@ -1,0 +1,30 @@
+<header>
+    <div class="header">
+        <a href="/"><img srcset="/static/images/logo_2x.png 2x, /static/images/logo.png 1x" alt="sabka-bazaar logo"
+                class="logo"></a>
+        <nav role="navigation">
+            <div class="header__list mobile-nav" id="mobileNav">
+                <ul class="header__list__left">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/products">Products</a></li>
+                </ul>
+                <ul class="header__list__right">
+                    <li><a href="/login">Login</a></li>
+                    <li><a href="/register">Register</a></li>
+                </ul>
+            </div>
+            <div class="header__cart">
+                <span class="header__cart__box">
+                    <a href="/cart" class="header__cart__on__hover">
+                        <img src="/static/images/cart.svg" alt="cart" class="header__cart__img" id="cart-modal">
+                        <p class="cart__count__item">{{cart.count }} </p>
+                        <p>items</p>
+                    </a>
+                    <a class="icon" id="bar">
+                        <i class="fa fa-bars"></i>
+                    </a>
+                </span>
+            </div>
+        </nav>
+    </div>
+</header>

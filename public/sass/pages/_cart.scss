@@ -1,0 +1,216 @@
+.cart {
+  background-color: $bg-color;
+  display: flex;
+  flex-direction: column;
+  @include max-width;
+  padding: 20px;
+  &__header {
+    @include position-bg;
+    margin-top: 24px;
+    width: $width;
+    padding: 12px;
+    display: flex;
+    align-items: baseline;
+  }
+  &__item {
+    @include position-bg;
+    margin-top: 16px;
+    width: $width;
+    @include display-flex;
+    span {
+      align-self: center;
+    }
+    &__content {
+      flex: 1;
+    }
+  }
+  &__counter {
+    border: none;
+    max-width: 15%;
+    // margin: 0 14px;
+    background: none;
+    text-align: center;
+  }
+  &__content__price {
+    @include position-bg;
+    margin: 16px 0px;
+    width: $width;
+    padding: 12px;
+    display: flex;
+    align-items: center;
+  }
+  &__checkout__btn {
+    left: 0;
+    width: $width;
+    @include max-width;
+    @include position-bg;
+    color: $color-secondary;
+    text-align: center;
+    padding: 10px 8px;
+
+    p {
+      text-align: center;
+      color: $color-tertairy;
+      font-weight: 300;
+      font-size: 16px;
+      margin-bottom: 6px;
+    }
+  }
+  &__content__model {
+    display: flex;
+    border-bottom: $border-bottom;
+    padding: 10px;
+    img {
+      height: 100%;
+      width: 18%;
+    }
+    .total__price {
+      padding: 24px 10px;
+    }
+  }
+  &__item__count--plus,
+  &__item__count--minus {
+    background: $color-primary;
+    border: none;
+    padding: 1px 4px;
+    border-radius: 10px;
+  }
+}
+
+.total__price {
+  align-self: flex-end;
+  padding: 24px;
+}
+
+.checkout__btn {
+  background-color: $color-primary;
+  color: $color-secondary;
+  text-align: center;
+  width: $width;
+  @include display-flex;
+  border-radius: 6px;
+  border: none;
+  padding: 16px 24px;
+  text-decoration: none;
+  &:focus {
+    outline: none;
+  }
+}
+
+.item__price {
+  margin: 8px 0px;
+  position: relative;
+  text-align: right;
+  .btn {
+    background-color: $color-primary;
+    border: none;
+    color: $color-secondary;
+    padding: 10px 12px;
+    cursor: $cursor;
+    display: inline-block;
+    text-decoration: none;
+    span {
+      cursor: $cursor;
+      display: inline-block;
+      position: absolute;
+      transition: 0.5s;
+      font-size: 16px;
+      left: 0;
+      color: $color-tertairy;
+      font-size: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 30px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  padding-top: 0;
+  margin-top: 85px;
+  &__content {
+    position: relative;
+    background-color: $color-secondary;
+    margin: auto;
+    border: 1px solid #888;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s;
+    height: 89vh;
+    width: 30%;
+    float: right;
+    margin-top: 54px;
+    padding-top: 0;
+    margin: unset;
+  }
+  &__header {
+    padding: 2px 16px;
+    background-color: $color-tertairy;
+    color: $color-secondary;
+  }
+  &__body {
+    text-align: center;
+  }
+  &__footer {
+    padding: 2px 16px;
+    background-color: $color-primary;
+    color: $color-secondary;
+    position: absolute;
+    width: 94%;
+    bottom: 19px;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+    h3 {
+      text-align: center;
+    }
+    a {
+      text-decoration: none;
+      color: $color-secondary;
+    }
+  }
+}
+
+.close {
+  float: right;
+  padding: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  &:hover {
+    text-decoration: none;
+    cursor: pointer;
+  }
+  &:focus {
+    text-decoration: none;
+    cursor: pointer;
+  }
+}
+
+.item__count {
+  margin-top: 12px;
+  button {
+    background: $color-primary;
+    border: none;
+    padding: 2px 8px;
+    border-radius: 3px;
+    color: $color-secondary;
+    &:focus {
+      outline: none;
+    }
+  }
+}
+.product__img {
+  max-height: 140px;
+  padding: 0px 20px;
+}
+

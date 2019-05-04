@@ -1,0 +1,7 @@
+{
+    "inputs": [{ "label": "Email", "type": "text" },
+    { "label": "Password", "type": "password" }
+    ],
+    "Heading": "Login",
+    "SubHeading": "Get access to your Orders, Wishlist and Recommendations"
+}
